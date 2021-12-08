@@ -6,4 +6,4 @@ src = "src"
 title = "rsadsb blog"
 
 [output.html]
-git-repository-url = "github.com/rsadsb/mdbook"
+git-repository-url = "github.com/rsadsb/rsadsb.github.io"
