@@ -3,7 +3,10 @@ authors = ["wcampbell"]
 language = "en"
 multilingual = false
 src = "src"
-title = "rsadsb blog"
+title = "rsadsb"
 
 [output.html]
 git-repository-url = "github.com/rsadsb/rsadsb.github.io"
+default-theme = "navy"
+
+[output.linkcheck]
