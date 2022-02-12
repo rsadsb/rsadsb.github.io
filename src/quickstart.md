@@ -1,6 +1,6 @@
 # ADS-B Quick Start Installation Guide
 
-This gude will give you a quick and easy setup guide to demodulate and decode ADS-B message using our Rust software!
+This guide will give you a quick and easy setup guide to demodulate and decode ADS-B message using our Rust software!
 For a good intro into what ADS-B is and how it is decode, see the following [guide](https://mode-s.org/decode/).
 
 # Hardware
@@ -22,7 +22,7 @@ from the sky and you should be fine. If you want a super cheap solution, I have 
 You will need a N-Type Male SMA to SMA Male connection cable. You can also find these on [store.adsbexchange.com](https://store.adsbexchange.com/collections/all). This will allow you to connect the antenna directly to the `rltsdr`.
 The `rtlsdr` should be plugged into your computer's USB port.
 
-# Software 
+# Software
 
 ### [dump1090_rs](https://github.com/rsadsb/dump1090_rs)
 `dump1090_rs` performs the demodulating of the 1090Mhz signal from an SDR (Software Defined Radio),
