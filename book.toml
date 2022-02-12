@@ -10,3 +10,4 @@ git-repository-url = "github.com/rsadsb/rsadsb.github.io"
 default-theme = "navy"
 
 [output.linkcheck]
+optional = true
