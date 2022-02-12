@@ -43,11 +43,17 @@ See [quickstart](quickstart.md) for the base hardware requirements and software 
 #### Car Mount
 The lip mount car antenna makes you the real nerd.
 
+![picture](media/IMG_20220212_154331.jpg)
+
 #### rtlsdr 
 The `rtlsdr` software defined radio allows us to capture the airplanes emitted signal.
 
+![picture](media/IMG_20220212_154354.jpg)
+
 #### GPS
 Using the `radar --gpsd` option and a `gpsd` daemon, we automatically get the lat and lon position.
+
+![picture](media/IMG_20220212_154237.jpg)
 
 ## Software
 
