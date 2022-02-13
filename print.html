@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="quickstart.html"><strong aria-hidden="true">1.</strong> Quick Start</a></li><li class="chapter-item expanded "><a href="rasp-pi-display.html"><strong aria-hidden="true">2.</strong> Raspberry Pi in-car ADS-B Display - with Rust!</a></li><li class="chapter-item expanded "><a href="rsadsb_releases.html"><strong aria-hidden="true">3.</strong> rsadsb Release Notes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="v0.5.0.html"><strong aria-hidden="true">3.1.</strong> v0.5.0</a></li><li class="chapter-item expanded "><a href="v0.4.0.html"><strong aria-hidden="true">3.2.</strong> v0.4.0</a></li></ol></li><li class="chapter-item expanded "><a href="thanks.html"><strong aria-hidden="true">4.</strong> Thanks</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="quickstart.html"><strong aria-hidden="true">1.</strong> Quick Start</a></li><li class="chapter-item expanded "><a href="rasp-pi-display.html"><strong aria-hidden="true">2.</strong> Raspberry Pi in-car ADS-B Display - with Rust!</a></li><li class="chapter-item expanded "><a href="rsadsb_releases.html"><strong aria-hidden="true">3.</strong> rsadsb Release Notes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="v0.5.1.html"><strong aria-hidden="true">3.1.</strong> v0.5.1</a></li><li class="chapter-item expanded "><a href="v0.5.0.html"><strong aria-hidden="true">3.2.</strong> v0.5.0</a></li><li class="chapter-item expanded "><a href="v0.4.0.html"><strong aria-hidden="true">3.3.</strong> v0.4.0</a></li></ol></li><li class="chapter-item expanded "><a href="thanks.html"><strong aria-hidden="true">4.</strong> Thanks</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -175,17 +175,17 @@ Searching for <code>soapysdr-rtlsdr</code> and <code>soapysdr</code> should lead
 <p>Binaries can be downloaded from the latest releases of our software on github.
 The following is an example for <code>x86_64</code>.</p>
 <pre><code># download dump1090_rs
-&gt; wget https://github.com/rsadsb/dump1090_rs/releases/download/v0.5.0/dump1090_rs-x86_64-unknown-linux-gnu.tar.gz
+&gt; wget https://github.com/rsadsb/dump1090_rs/releases/download/v0.5.1/dump1090_rs-x86_64-unknown-linux-gnu.tar.gz
 &gt; tar -xf dump1090_rs-x86_64-unknown-linux-gnu.tar.gz
 
 # download radar
-&gt; wget https://github.com/rsadsb/adsb_deku/releases/download/v0.5.0/radar-x86_64-unknown-linux-gnu.tar.gz
+&gt; wget https://github.com/rsadsb/adsb_deku/releases/download/v0.5.1/radar-x86_64-unknown-linux-gnu.tar.gz
 &gt; tar -xf radar-x86_64-unknown-linux-gnu.tar.gz
 </code></pre>
 <p><code>ARM</code> releases are also available:</p>
 <ul>
-<li><a href="https://github.com/rsadsb/dump1090_rs/releases/tag/v0.5.0">dump1090_rs</a></li>
-<li><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v0.5.0">radar</a></li>
+<li><a href="https://github.com/rsadsb/dump1090_rs/releases/tag/v0.5.1">dump1090_rs</a></li>
+<li><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v0.5.1">radar</a></li>
 </ul>
 <h2 id="install-from-souce-for-performance"><a class="header" href="#install-from-souce-for-performance">Install from souce (for performance)</a></h2>
 <details>
@@ -340,6 +340,23 @@ st -e ~/.cargo/bin/radar --lat=&quot;39.0&quot; --long=&quot;-84.00&quot; --scal
 <li><a href="v0.5.0.html">v0.5.0</a></li>
 <li><a href="v0.4.0.html">v0.4.0</a></li>
 </ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="v051-release-notes---feb-13-2022"><a class="header" href="#v051-release-notes---feb-13-2022">v0.5.1 Release Notes - Feb 13, 2022</a></h1>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/rsadsb/adsb_deku/master/media/logo.png")
+</p>
+<p>Minor bugfix to the <code>radar</code> application.</p>
+<h2 id="links--changelogs"><a class="header" href="#links--changelogs">Links / Changelogs</a></h2>
+<p>All code is released under the <a href="https://github.com/rsadsb">github/rsadsb</a> account.
+Release binaries are available at the following links.</p>
+<h3 id="a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv051adsb_deku-v051a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv051adsb_deku-v051a"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v0.5.1">adsb_deku v0.5.1</a></a></h3>
+<p>See <a href="https://github.com/rsadsb/adsb_deku/blob/v0.5.1/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on <code>adsb_deku</code> library, <code>radar</code>, and <code>1090</code>. </p>
+<p>The library docs.rs documetation for this release is <a href="https://docs.rs/adsb_deku/0.5.1/adsb_deku/">here</a></p>
+<h3 id="a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv051dump1090_rs-v051a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv051dump1090_rs-v051a"><a href="https://github.com/rsadsb/dump1090_rs/releases/tag/v0.5.1">dump1090_rs v0.5.1</a></a></h3>
+<p>See <a href="https://github.com/rsadsb/dump1090_rs/blob/v0.5.1/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on the <code>dump1090_rs</code> application. </p>
+<h2 id="radar"><a class="header" href="#radar">radar</a></h2>
+<ul>
+<li>fix: Swap <code>Airplanes</code> table &quot;Latitude&quot; and &quot;Longitude&quot;, found by reddit user @BanksOfTheOuchita (<a href="https://github.com/rsadsb/adsb_deku/pull/111">!111</a>)</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="v050-release-notes---feb-12-2022"><a class="header" href="#v050-release-notes---feb-12-2022">v0.5.0 Release Notes - Feb 12, 2022</a></h1>
 <p align="center">
   <img src="https://raw.githubusercontent.com/rsadsb/adsb_deku/master/media/logo.png")
@@ -350,7 +367,7 @@ A huge <a href="thanks.html">thanks</a> to all.</p>
 <p>See <a href="quickstart.html">quickstart guide</a> for a installation guide.</p>
 <p>See <a href="rasp-pi-display.html">Raspberry Pi in-car ADS-B Display - with Rust!</a> for my blog post on using my libraries and applications for an in-car ADS-B display.</p>
 <p>If you want to track Elon Musk with Rust, check <a href="https://github.com/rsadsb/elons-jets-rs">this repo</a> out ;)</p>
-<h2 id="links--changelogs"><a class="header" href="#links--changelogs">Links / Changelogs</a></h2>
+<h2 id="links--changelogs-1"><a class="header" href="#links--changelogs-1">Links / Changelogs</a></h2>
 <p>All code is released under the <a href="https://github.com/rsadsb">github/rsadsb</a> account.
 Release binaries are available at the following links.</p>
 <h3 id="a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv050adsb_deku-v050a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv050adsb_deku-v050a"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v0.5.0">adsb_deku v0.5.0</a></a></h3>
@@ -359,8 +376,12 @@ Release binaries are available at the following links.</p>
 <h3 id="a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv050dump1090_rs-v050a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv050dump1090_rs-v050a"><a href="https://github.com/rsadsb/dump1090_rs/releases/tag/v0.5.0">dump1090_rs v0.5.0</a></a></h3>
 <p>See <a href="https://github.com/rsadsb/dump1090_rs/blob/v0.5.0/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on the <code>dump1090_rs</code> application. </p>
 <h2 id="discuss"><a class="header" href="#discuss">Discuss</a></h2>
+<ul>
+<li><a href="https://www.reddit.com/r/rust/comments/sr4ara/raspberry_pi_incar_adsb_display_with_rust/">/r/rust</a></li>
+<li><a href="https://twitter.com/wcampbell42/status/1492607956294250505">twitter</a></li>
+</ul>
 <h2 id="news"><a class="header" href="#news">News</a></h2>
-<h2 id="radar"><a class="header" href="#radar">radar</a></h2>
+<h2 id="radar-1"><a class="header" href="#radar-1">radar</a></h2>
 <p><code>x86_64-unknown-linux-gnu</code>
 <img src="media/radar_main_v0.5.0.gif" alt="video" /></p>
 <p><code>armv7-unknown-linux-gnueabihf</code>
@@ -438,7 +459,7 @@ improving performance.</p>
 <li><a href="https://this-week-in-rust.org/blog/2021/12/15/this-week-in-rust-421/">This Week in Rust 421</a></li>
 </ul>
 <hr />
-<h2 id="radar-1"><a class="header" href="#radar-1">radar</a></h2>
+<h2 id="radar-2"><a class="header" href="#radar-2">radar</a></h2>
 <p><img src="https://raw.githubusercontent.com/rsadsb/adsb_deku/master/media/2021_12_08.gif" alt="image" /></p>
 <h3 id="updates-1"><a class="header" href="#updates-1">Updates</a></h3>
 <p>Thank you to <a href="https://github.com/wiseman">@wiseman</a> for helping me develop features.</p>
