@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="quickstart.html"><strong aria-hidden="true">1.</strong> Quick Start</a></li><li class="chapter-item expanded "><a href="rasp-pi-display.html"><strong aria-hidden="true">2.</strong> Raspberry Pi in-car ADS-B Display - with Rust!</a></li><li class="chapter-item expanded "><a href="rsadsb_releases.html"><strong aria-hidden="true">3.</strong> rsadsb Release Notes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="v0.5.1.html"><strong aria-hidden="true">3.1.</strong> v0.5.1</a></li><li class="chapter-item expanded "><a href="v0.5.0.html"><strong aria-hidden="true">3.2.</strong> v0.5.0</a></li><li class="chapter-item expanded "><a href="v0.4.0.html"><strong aria-hidden="true">3.3.</strong> v0.4.0</a></li></ol></li><li class="chapter-item expanded "><a href="thanks.html"><strong aria-hidden="true">4.</strong> Thanks</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="home.html">Home</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="quickstart.html"><strong aria-hidden="true">1.</strong> Quick Start</a></li><li class="chapter-item expanded "><a href="rasp-pi-display.html"><strong aria-hidden="true">2.</strong> Raspberry Pi in-car ADS-B Display - with Rust!</a></li><li class="chapter-item expanded "><a href="rsadsb_releases.html"><strong aria-hidden="true">3.</strong> rsadsb Release Notes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="v0.5.1.html"><strong aria-hidden="true">3.1.</strong> v0.5.1</a></li><li class="chapter-item expanded "><a href="v0.5.0.html"><strong aria-hidden="true">3.2.</strong> v0.5.0</a></li><li class="chapter-item expanded "><a href="v0.4.0.html"><strong aria-hidden="true">3.3.</strong> v0.4.0</a></li></ol></li><li class="chapter-item expanded "><a href="thanks.html"><strong aria-hidden="true">4.</strong> Thanks</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -146,7 +146,30 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="ads-b-quick-start-installation-guide"><a class="header" href="#ads-b-quick-start-installation-guide">ADS-B Quick Start Installation Guide</a></h1>
+                        <h1 id="rsadsb"><a class="header" href="#rsadsb">rsadsb</a></h1>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/rsadsb/adsb_deku/master/media/logo.png")
+</p>
+<p>Welcome! This is the home page for the <strong>rsadsb</strong> project.
+A Rust software suite for ADS-B demodulation, decoding, and processing.</p>
+<h2 id="features"><a class="header" href="#features">Features</a></h2>
+<ul>
+<li><strong>Easy Install</strong> - binaries are provided for multiple platforms within the github releases.</li>
+<li><strong>Beautiful Applications</strong>  - the <strong>radar</strong> application uses <a href="https://github.com/fdehau/tui-rs">tui</a> to create elegant terminal applications.</li>
+<li><strong>Correct Decoding</strong> - <strong>rsadsb</strong> uses state of the art libraries such as <a href="https://github.com/sharksforarms/deku">deku</a> to closely and correctly parse the ADS-B protocol.</li>
+<li><strong>Touchscreen Enabled</strong> - <strong>radar</strong> is designed to use with both just a keyboard, or a touchscreen.</li>
+<li><strong>Extendable Hackable source code</strong> - all source code is open-source and is easily modified.</li>
+</ul>
+<h2 id="quickstart"><a class="header" href="#quickstart">Quickstart</a></h2>
+<p>See <a href="quickstart.html">quickstart</a> for the easy installation process.</p>
+<h2 id="latest-release"><a class="header" href="#latest-release">Latest Release</a></h2>
+<h3 id="major"><a class="header" href="#major">Major</a></h3>
+<p><a href="v0.5.0.html">v0.5.0</a></p>
+<h3 id="minor"><a class="header" href="#minor">Minor</a></h3>
+<p><a href="v0.5.1.html">v0.5.1</a></p>
+<h2 id="contributing"><a class="header" href="#contributing">Contributing</a></h2>
+<p>All source code for the project is stored on <a href="https://github.com/rsadsb">github</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ads-b-quick-start-installation-guide"><a class="header" href="#ads-b-quick-start-installation-guide">ADS-B Quick Start Installation Guide</a></h1>
 <p>This guide will give you a quick and easy setup guide to demodulate and decode ADS-B message using our Rust software!
 For a good intro into what ADS-B is and how it is decode, see the following <a href="https://mode-s.org/decode/">guide</a>.</p>
 <h1 id="hardware"><a class="header" href="#hardware">Hardware</a></h1>
