@@ -26,7 +26,9 @@ See [quickstart](quickstart.md) for the easy installation process.
 [v0.5.1](v0.5.1.md)
 
 ## News
-* **rtl-sdr.com 2/15/2020:** [rsadsb: Terminal Based Aircraft Radar on the Raspberry Pi](https://www.rtl-sdr.com/rsadsb-terminal-based-aircraft-radar-on-the-raspberry-pi)
+* **rtl-sdr.com 2/15/2020:**
+    - [rsadsb: Terminal Based Aircraft Radar on the Raspberry Pi](https://www.rtl-sdr.com/rsadsb-terminal-based-aircraft-radar-on-the-raspberry-pi) 
+    - [twitter](https://twitter.com/rtlsdrblog/status/1493415462780104706)
 
 ## Contributing
 All source code for the project is stored on [github](https://github.com/rsadsb).
