@@ -228,7 +228,7 @@ cpu features such as AVX(Advanced Vector Extensions) on x86 architectures.
 These are currently only detected at compile time and is the reason for <code>RUSTFLAGS=&quot;-C target-cpu=native&quot;</code> in the following install commands.</p>
 <h4 id="install-compiler"><a class="header" href="#install-compiler">Install Compiler</a></h4>
 <p>Goto <a href="https://rustup.rs">rustup.rs</a> and follow instructions for installing <code>rust</code> and <code>cargo</code>.
-The current MSRV is <code>1.58.1</code>.</p>
+The current msrv(minimum supported rust version) is <code>1.59.0</code>.</p>
 <h3 id="a-hrefhttpsgithubcomrsadsbdump1090_rsdump1090_rsa-1"><a class="header" href="#a-hrefhttpsgithubcomrsadsbdump1090_rsdump1090_rsa-1"><a href="https://github.com/rsadsb/dump1090_rs">dump1090_rs</a></a></h3>
 <pre><code class="language-shell">RUSTFLAGS=&quot;-C target-cpu=native&quot; cargo install --git https://github.com/rsadsb/dump1090_rs
 </code></pre>
@@ -247,6 +247,7 @@ See <a href="rasp-pi-display.html">Raspberry Pi in-car ADS-B Display - with Rust
 &gt; radar --disable-lat-long --lat=&quot;50.0&quot; ---long=&quot;50.0&quot; --locations &quot;(one,100.0,-50.0)&quot; &quot;(two, 50.0, -100.0)&quot;
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="raspberry-pi-in-car-ads-b-display---with-rust"><a class="header" href="#raspberry-pi-in-car-ads-b-display---with-rust">Raspberry Pi in-car ADS-B Display - with Rust!</a></h1>
+<p><em>last edited: 03/04/22</em></p>
 <p>Do you have aircraft flying above your car, or just want to see all the aircraft around your area as you sit in the passenger seat
 <del>or just really nerdy and want to use the Rust language and a Raspberry Pi in your car</del>?
 This project will leave you with a Raspberry Pi touchscreen that uses our <code>radar</code> and <code>dump1090_rs</code> applications to do just that!</p>
@@ -364,6 +365,15 @@ st -e ~/.cargo/bin/radar --lat=&quot;39.0&quot; --long=&quot;-84.00&quot; --scal
 &quot;(fhq,39.4503696,-82.2616143)&quot; &quot;(mwo,39.4670316,-84.3879972)&quot; &quot;(rma,39.7298745,-84.8377054)&quot; \
 &quot;(fma,38.2256493,-84.0172027)&quot; &quot;(fwa,41.0588807,-85.2668302)&quot;
 </code></pre>
+<h1 id="discuss"><a class="header" href="#discuss">Discuss</a></h1>
+<ul>
+<li><a href="https://www.rtl-sdr.com/rsadsb-terminal-based-aircraft-radar-on-the-raspberry-pi/">rtl-sdr.com article</a></li>
+<li><a href="https://twitter.com/rtlsdrblog/status/1493415462780104706">rtl-sdr.com twitter</a></li>
+<li><a href="https://www.reddit.com/r/rust/comments/sr4ara/raspberry_pi_incar_adsb_display_with_rust/">reddit/rust</a></li>
+<li><a href="https://news.ycombinator.com/item?id=30317976">hackernews</a></li>
+<li><a href="https://twitter.com/MyriadRF/status/1497257351128231950">myriadRF(limesdr) OTA twitter</a></li>
+<li><a href="https://myriadrf.org/news/ota-ads-b-tracking-at-the-terminal-open-ran-silicon-beginners-guides-and-more/">myriadRF(limsdr) OTA article</a></li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="rsadsb-releases"><a class="header" href="#rsadsb-releases">rsadsb Releases</a></h1>
 <p align="center">
   <img src="https://raw.githubusercontent.com/rsadsb/adsb_deku/master/media/logo.png")
@@ -408,14 +418,25 @@ Release binaries are available at the following links.</p>
 <p>The library docs.rs documetation for this release is <a href="https://docs.rs/adsb_deku/0.5.0/adsb_deku/">here</a></p>
 <h3 id="a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv050dump1090_rs-v050a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv050dump1090_rs-v050a"><a href="https://github.com/rsadsb/dump1090_rs/releases/tag/v0.5.0">dump1090_rs v0.5.0</a></a></h3>
 <p>See <a href="https://github.com/rsadsb/dump1090_rs/blob/v0.5.0/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on the <code>dump1090_rs</code> application. </p>
-<h2 id="discuss"><a class="header" href="#discuss">Discuss</a></h2>
+<h2 id="discuss-1"><a class="header" href="#discuss-1">Discuss</a></h2>
 <ul>
 <li><a href="https://www.reddit.com/r/rust/comments/sr4ara/raspberry_pi_incar_adsb_display_with_rust/">/r/rust</a></li>
 <li><a href="https://twitter.com/wcampbell42/status/1492607956294250505">twitter</a></li>
 </ul>
 <h2 id="news-1"><a class="header" href="#news-1">News</a></h2>
 <ul>
-<li><strong>rtl-sdr.com 2/15/2020:</strong> <a href="https://www.rtl-sdr.com/rsadsb-terminal-based-aircraft-radar-on-the-raspberry-pi">rsadsb: Terminal Based Aircraft Radar on the Raspberry Pi</a></li>
+<li><strong>rtl-sdr.com 2/15/2020:</strong> <a href="https://www.rtl-sdr.com/rsadsb-terminal-based-aircraft-radar-on-the-raspberry-pi">rsadsb: Terminal Based Aircraft Radar on the Raspberry Pi</a>
+<ul>
+<li><a href="https://twitter.com/rtlsdrblog/status/1493415462780104706">twitter</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong>myraidRF OTA 2/25/2020:</strong> <a href="https://myriadrf.org/news/ota-ads-b-tracking-at-the-terminal-open-ran-silicon-beginners-guides-and-more/">OTA: ADS-B Tracking at the Terminal, Open RAN Silicon, Beginner’s Guides, and More</a>
+<ul>
+<li><a href="https://twitter.com/MyriadRF/status/1497257351128231950">twitter</a></li>
+</ul>
+</li>
 </ul>
 <h2 id="radar-1"><a class="header" href="#radar-1">radar</a></h2>
 <p><code>x86_64-unknown-linux-gnu</code>
@@ -484,7 +505,7 @@ improving performance.</p>
 <p>See <a href="https://github.com/rsadsb/adsb_deku/blob/v0.4.0/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on adsb_deku library, radar, and 1090. </p>
 <h3 id="a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv040dump1090_rs-v040a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv040dump1090_rs-v040a"><a href="https://github.com/rsadsb/dump1090_rs/releases/tag/v0.4.0">dump1090_rs v0.4.0</a></a></h3>
 <p>See <a href="https://github.com/rsadsb/dump1090_rs/blob/v0.4.0/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on the dump1090 application. </p>
-<h3 id="discuss-1"><a class="header" href="#discuss-1">Discuss</a></h3>
+<h3 id="discuss-2"><a class="header" href="#discuss-2">Discuss</a></h3>
 <ul>
 <li><a href="https://www.reddit.com/r/rust/comments/rcig0o/media_view_airplanes_in_the_sky_with_rust/?utm_source=share&amp;utm_medium=web2x&amp;context=3">/r/rust post</a></li>
 <li><a href="https://www.reddit.com/r/RTLSDR/comments/rciosj/media_view_airplanes_in_the_sky_with_rust/?utm_source=share&amp;utm_medium=web2x&amp;context=3">/r/rtlsdr post</a></li>
