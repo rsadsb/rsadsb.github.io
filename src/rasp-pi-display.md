@@ -1,4 +1,5 @@
 # Raspberry Pi in-car ADS-B Display - with Rust!
+_last edited: 03/04/22_
 
 Do you have aircraft flying above your car, or just want to see all the aircraft around your area as you sit in the passenger seat
 ~~or just really nerdy and want to use the Rust language and a Raspberry Pi in your car~~?
@@ -152,3 +153,12 @@ st -e ~/.cargo/bin/radar --lat="39.0" --long="-84.00" --scale="0.80" \
 "(fhq,39.4503696,-82.2616143)" "(mwo,39.4670316,-84.3879972)" "(rma,39.7298745,-84.8377054)" \
 "(fma,38.2256493,-84.0172027)" "(fwa,41.0588807,-85.2668302)"
 ```
+
+
+# Discuss
+* [rtl-sdr.com article](https://www.rtl-sdr.com/rsadsb-terminal-based-aircraft-radar-on-the-raspberry-pi/)
+* [rtl-sdr.com twitter](https://twitter.com/rtlsdrblog/status/1493415462780104706)
+* [reddit/rust](https://www.reddit.com/r/rust/comments/sr4ara/raspberry_pi_incar_adsb_display_with_rust/)
+* [hackernews](https://news.ycombinator.com/item?id=30317976)
+* [myriadRF(limesdr) OTA twitter](https://twitter.com/MyriadRF/status/1497257351128231950)
+* [myriadRF(limsdr) OTA article](https://myriadrf.org/news/ota-ads-b-tracking-at-the-terminal-open-ran-silicon-beginners-guides-and-more/)
