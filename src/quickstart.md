@@ -67,7 +67,7 @@ These are currently only detected at compile time and is the reason for `RUSTFLA
 
 #### Install Compiler
 Goto [rustup.rs](https://rustup.rs) and follow instructions for installing `rust` and `cargo`.
-The current MSRV is `1.58.1`.
+The current msrv(minimum supported rust version) is `1.59.0`.
 
 
 ### [dump1090_rs](https://github.com/rsadsb/dump1090_rs)
