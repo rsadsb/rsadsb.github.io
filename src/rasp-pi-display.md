@@ -83,7 +83,7 @@ Restart the gpsd service, or start it if not running.
 > systemctl restart gpsd
 ```
 ### dwm
-This is the simpliest X server display manager I can find, leaving our applications running nicely with
+This is the simplest X server display manager I can find, leaving our applications running nicely with
 the small ARM processor on board the raspberry pi. I also used a patch that adds an autostart script.
 
 ```shell

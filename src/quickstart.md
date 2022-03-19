@@ -7,7 +7,7 @@ For a good intro into what ADS-B is and how it is decode, see the following [gui
 
 ## SDR (Software Defined Radio)
 If your focus is on ease of use, as well as value(~$25) you should use an [rtlsdr](https://www.rtl-sdr.com/about-rtl-sdr/) Software Defined Radio.
-A simple one with a filter and amplifier can be bought from [adsexchange](https://store.adsbexchange.com/products/adsbexchange-com-r820t2-rtl2832u-0-5-ppm-tcxo-ads-b-sdr-w-amp-and-1090-mhz-filter-software-on-industrial-microsd).
+A simple one with a filter and amplifier can be bought from [adsbexchange](https://store.adsbexchange.com/products/adsbexchange-com-r820t2-rtl2832u-0-5-ppm-tcxo-ads-b-sdr-w-amp-and-1090-mhz-filter-software-on-industrial-microsd).
 
 ![adsb-exchange rtlsdr](https://cdn.shopify.com/s/files/1/1618/5293/products/BlueSDRantennaandmicroSD_1024x1024@2x.png?v=1643391183)
 
@@ -55,7 +55,7 @@ The following is an example for `x86_64`.
 - [radar](https://github.com/rsadsb/adsb_deku/releases/tag/v0.5.1)
 
 
-## Install from souce (for performance)
+## Install from source (for performance)
 
 <details>
   <summary>Instructions</summary>

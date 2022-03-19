@@ -1,7 +1,7 @@
 # Thanks
 
 I can try and *not* make this a `cargo tree`,
-but I want to thank the fantastic libraries that are in the Rust ecosytsem and people/projects that
+but I want to thank the fantastic libraries that are in the Rust ecosystem and people/projects that
 have made this project achievable.
 
 - My wife - for letting me attach an antenna to a window on our house and on my car ;)
