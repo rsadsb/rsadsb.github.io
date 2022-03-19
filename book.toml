@@ -6,7 +6,7 @@ src = "src"
 title = "rsadsb"
 
 [output.html]
-git-repository-url = "github.com/rsadsb/rsadsb.github.io"
+git-repository-url = "https://github.com/rsadsb/rsadsb.github.io"
 default-theme = "navy"
 
 [output.linkcheck]
