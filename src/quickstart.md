@@ -100,3 +100,8 @@ See [Raspberry Pi in-car ADS-B Display - with Rust!](rasp-pi-display.md) for a b
 # run radar
 > radar --disable-lat-long --lat="50.0" ---long="50.0" --locations "(one, 100.0,-50.0)" "(two, 50.0, -100.0)"
 ```
+
+## Questions/Help
+* Open up a discussion on [rsadsb/adsb_deku](https://github.com/rsadsb/adsb_deku/discussions) for `radar` help.
+* Open up a discussion on [rsadsb/dump1090_rs](https://github.com/rsadsb/dump1090_rs/discussions) for `dump1090_rs` help.
+* You can also email me @ `wcampbell1995[dot]gmail[dot]com`.
