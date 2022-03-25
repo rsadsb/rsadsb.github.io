@@ -1,7 +1,8 @@
 # ADS-B Quick Start Installation Guide
+_last edited: 03/24/22_
 
-This guide will give you a quick and easy setup guide to demodulate and decode ADS-B message using our Rust software!
-For a good intro into what ADS-B is and how it is decode, see the following [guide](https://mode-s.org/decode/).
+This guide will give you a quick and easy to setup system to demodulate and decode ADS-B messages using this Rust software!
+For a good technical intro into what ADS-B is and how it is decoded, see the following [guide](https://mode-s.org/decode/).
 
 # Hardware
 
@@ -55,7 +56,7 @@ The following is an example for `x86_64`.
 - [radar](https://github.com/rsadsb/adsb_deku/releases/tag/v0.5.1)
 
 
-## Install from source (for performance)
+## (Optional) Install from source for max performance
 
 <details>
   <summary>Instructions</summary>
@@ -69,13 +70,16 @@ These are currently only detected at compile time and is the reason for `RUSTFLA
 Goto [rustup.rs](https://rustup.rs) and follow instructions for installing `rust` and `cargo`.
 The current msrv(minimum supported rust version) is `1.59.0`.
 
+### Install soapysdr library
+You will need the soapysdr library. For example, this is `libsoapysdr-dev` on ubuntu based platforms.
 
-### [dump1090_rs](https://github.com/rsadsb/dump1090_rs)
+
+### [dump1090_rs](https://github.com/rsadsb/dump1090_rs) from master branch
 ```shell
 RUSTFLAGS="-C target-cpu=native" cargo install --git https://github.com/rsadsb/dump1090_rs
 ```
 
-### [radar](https://github.com/rsadsb/adsb_deku)
+### [radar](https://github.com/rsadsb/adsb_deku) from master branch
 
 ```shell
 RUSTFLAGS="-C target-cpu=native" cargo install --git https://github.com/rsadsb/adsb_deku rsadsb_apps --bin radar
@@ -91,5 +95,5 @@ See [Raspberry Pi in-car ADS-B Display - with Rust!](rasp-pi-display.md) for a b
 > dump1090_rs
 
 # run radar
-> radar --disable-lat-long --lat="50.0" ---long="50.0" --locations "(one,100.0,-50.0)" "(two, 50.0, -100.0)"
+> radar --disable-lat-long --lat="50.0" ---long="50.0" --locations "(one, 100.0,-50.0)" "(two, 50.0, -100.0)"
 ```
