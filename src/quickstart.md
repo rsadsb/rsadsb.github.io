@@ -1,5 +1,5 @@
 # ADS-B Quick Start Installation Guide
-_last edited: 03/24/22_
+_last edited: 03/25/22_
 
 This guide will give you a quick and easy to setup system to demodulate and decode ADS-B messages using this Rust software!
 For a good technical intro into what ADS-B is and how it is decoded, see the following [guide](https://mode-s.org/decode/).
@@ -37,6 +37,9 @@ as well as forwarding the bytes to our application.
 ## Linux dependencies
 You will need to install the `soapysdr` library, plus the `soapysdr` driver for your SDR(rtlsdr).
 Searching for `soapysdr-rtlsdr` and `soapysdr` should lead you on the right path.
+The `soapysdr` library can be foud as `libsoapysdr-dev` on ubuntu based systems.
+
+Install `libclang`, found as `libclang-dev` on ubuntu.
 
 ## From Releases (`x86_64`)
 Binaries can be downloaded from the latest releases of our software on github.
