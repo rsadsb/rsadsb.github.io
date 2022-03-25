@@ -146,8 +146,9 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="ads-b-quick-start-installation-guide"><a class="header" href="#ads-b-quick-start-installation-guide">ADS-B Quick Start Installation Guide</a></h1>
-<p>This guide will give you a quick and easy setup guide to demodulate and decode ADS-B message using our Rust software!
-For a good intro into what ADS-B is and how it is decode, see the following <a href="https://mode-s.org/decode/">guide</a>.</p>
+<p><em>last edited: 03/24/22</em></p>
+<p>This guide will give you a quick and easy to setup system to demodulate and decode ADS-B messages using this Rust software!
+For a good technical intro into what ADS-B is and how it is decoded, see the following <a href="https://mode-s.org/decode/">guide</a>.</p>
 <h1 id="hardware"><a class="header" href="#hardware">Hardware</a></h1>
 <h2 id="sdr-software-defined-radio"><a class="header" href="#sdr-software-defined-radio">SDR (Software Defined Radio)</a></h2>
 <p>If your focus is on ease of use, as well as value(~$25) you should use an <a href="https://www.rtl-sdr.com/about-rtl-sdr/">rtlsdr</a> Software Defined Radio.
@@ -186,7 +187,7 @@ The following is an example for <code>x86_64</code>.</p>
 <li><a href="https://github.com/rsadsb/dump1090_rs/releases/tag/v0.5.1">dump1090_rs</a></li>
 <li><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v0.5.1">radar</a></li>
 </ul>
-<h2 id="install-from-source-for-performance"><a class="header" href="#install-from-source-for-performance">Install from source (for performance)</a></h2>
+<h2 id="optional-install-from-source-for-max-performance"><a class="header" href="#optional-install-from-source-for-max-performance">(Optional) Install from source for max performance</a></h2>
 <details>
   <summary>Instructions</summary>
 <h4 id="native-cpu-features"><a class="header" href="#native-cpu-features">Native CPU features</a></h4>
@@ -196,10 +197,12 @@ These are currently only detected at compile time and is the reason for <code>RU
 <h4 id="install-compiler"><a class="header" href="#install-compiler">Install Compiler</a></h4>
 <p>Goto <a href="https://rustup.rs">rustup.rs</a> and follow instructions for installing <code>rust</code> and <code>cargo</code>.
 The current msrv(minimum supported rust version) is <code>1.59.0</code>.</p>
-<h3 id="a-hrefhttpsgithubcomrsadsbdump1090_rsdump1090_rsa-1"><a class="header" href="#a-hrefhttpsgithubcomrsadsbdump1090_rsdump1090_rsa-1"><a href="https://github.com/rsadsb/dump1090_rs">dump1090_rs</a></a></h3>
+<h3 id="install-soapysdr-library"><a class="header" href="#install-soapysdr-library">Install soapysdr library</a></h3>
+<p>You will need the soapysdr library. For example, this is <code>libsoapysdr-dev</code> on ubuntu based platforms.</p>
+<h3 id="a-hrefhttpsgithubcomrsadsbdump1090_rsdump1090_rsa-from-master-branch"><a class="header" href="#a-hrefhttpsgithubcomrsadsbdump1090_rsdump1090_rsa-from-master-branch"><a href="https://github.com/rsadsb/dump1090_rs">dump1090_rs</a> from master branch</a></h3>
 <pre><code class="language-shell">RUSTFLAGS=&quot;-C target-cpu=native&quot; cargo install --git https://github.com/rsadsb/dump1090_rs
 </code></pre>
-<h3 id="a-hrefhttpsgithubcomrsadsbadsb_dekuradara-1"><a class="header" href="#a-hrefhttpsgithubcomrsadsbadsb_dekuradara-1"><a href="https://github.com/rsadsb/adsb_deku">radar</a></a></h3>
+<h3 id="a-hrefhttpsgithubcomrsadsbadsb_dekuradara-from-master-branch"><a class="header" href="#a-hrefhttpsgithubcomrsadsbadsb_dekuradara-from-master-branch"><a href="https://github.com/rsadsb/adsb_deku">radar</a> from master branch</a></h3>
 <pre><code class="language-shell">RUSTFLAGS=&quot;-C target-cpu=native&quot; cargo install --git https://github.com/rsadsb/adsb_deku rsadsb_apps --bin radar
 </code></pre>
 </details>
@@ -211,7 +214,7 @@ See <a href="rasp-pi-display.html">Raspberry Pi in-car ADS-B Display - with Rust
 &gt; dump1090_rs
 
 # run radar
-&gt; radar --disable-lat-long --lat=&quot;50.0&quot; ---long=&quot;50.0&quot; --locations &quot;(one,100.0,-50.0)&quot; &quot;(two, 50.0, -100.0)&quot;
+&gt; radar --disable-lat-long --lat=&quot;50.0&quot; ---long=&quot;50.0&quot; --locations &quot;(one, 100.0,-50.0)&quot; &quot;(two, 50.0, -100.0)&quot;
 </code></pre>
 
                     </main>
