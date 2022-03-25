@@ -179,7 +179,7 @@ A Rust software suite for ADS-B demodulation, decoding, and processing.</p>
 <h2 id="contributing"><a class="header" href="#contributing">Contributing</a></h2>
 <p>All source code for the project is stored on <a href="https://github.com/rsadsb">github</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ads-b-quick-start-installation-guide"><a class="header" href="#ads-b-quick-start-installation-guide">ADS-B Quick Start Installation Guide</a></h1>
-<p><em>last edited: 03/24/22</em></p>
+<p><em>last edited: 03/25/22</em></p>
 <p>This guide will give you a quick and easy to setup system to demodulate and decode ADS-B messages using this Rust software!
 For a good technical intro into what ADS-B is and how it is decoded, see the following <a href="https://mode-s.org/decode/">guide</a>.</p>
 <h1 id="hardware"><a class="header" href="#hardware">Hardware</a></h1>
@@ -203,7 +203,9 @@ as well as forwarding the bytes to our application.</p>
 <p><img src="https://raw.githubusercontent.com/rsadsb/adsb_deku/master/media/peek_2022_02_06_02_640_640.gif" alt="image" /></p>
 <h2 id="linux-dependencies"><a class="header" href="#linux-dependencies">Linux dependencies</a></h2>
 <p>You will need to install the <code>soapysdr</code> library, plus the <code>soapysdr</code> driver for your SDR(rtlsdr).
-Searching for <code>soapysdr-rtlsdr</code> and <code>soapysdr</code> should lead you on the right path.</p>
+Searching for <code>soapysdr-rtlsdr</code> and <code>soapysdr</code> should lead you on the right path.
+The <code>soapysdr</code> library can be foud as <code>libsoapysdr-dev</code> on ubuntu based systems.</p>
+<p>Install <code>libclang</code>, found as <code>libclang-dev</code> on ubuntu.</p>
 <h2 id="from-releases-x86_64"><a class="header" href="#from-releases-x86_64">From Releases (<code>x86_64</code>)</a></h2>
 <p>Binaries can be downloaded from the latest releases of our software on github.
 The following is an example for <code>x86_64</code>.</p>
@@ -249,6 +251,12 @@ See <a href="rasp-pi-display.html">Raspberry Pi in-car ADS-B Display - with Rust
 # run radar
 &gt; radar --disable-lat-long --lat=&quot;50.0&quot; ---long=&quot;50.0&quot; --locations &quot;(one, 100.0,-50.0)&quot; &quot;(two, 50.0, -100.0)&quot;
 </code></pre>
+<h2 id="questionshelp"><a class="header" href="#questionshelp">Questions/Help</a></h2>
+<ul>
+<li>Open up a discussion on <a href="https://github.com/rsadsb/adsb_deku/discussions">rsadsb/adsb_deku</a> for <code>radar</code> help.</li>
+<li>Open up a discussion on <a href="https://github.com/rsadsb/dump1090_rs/discussions">rsadsb/dump1090_rs</a> for <code>dump1090_rs</code> help.</li>
+<li>You can also email me @ <code>wcampbell1995[dot]gmail[dot]com</code>.</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="raspberry-pi-in-car-ads-b-display---with-rust"><a class="header" href="#raspberry-pi-in-car-ads-b-display---with-rust">Raspberry Pi in-car ADS-B Display - with Rust!</a></h1>
 <p><em>last edited: 03/04/22</em></p>
 <p>Do you have aircraft flying above your car, or just want to see all the aircraft around your area as you sit in the passenger seat
