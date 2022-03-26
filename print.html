@@ -258,7 +258,7 @@ See <a href="rasp-pi-display.html">Raspberry Pi in-car ADS-B Display - with Rust
 <li>You can also email me @ <code>wcampbell1995[dot]gmail[dot]com</code>.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="raspberry-pi-in-car-ads-b-display---with-rust"><a class="header" href="#raspberry-pi-in-car-ads-b-display---with-rust">Raspberry Pi in-car ADS-B Display - with Rust!</a></h1>
-<p><em>last edited: 03/04/22</em></p>
+<p><em>last edited: 03/26/22</em></p>
 <p>Do you have aircraft flying above your car, or just want to see all the aircraft around your area as you sit in the passenger seat
 <del>or just really nerdy and want to use the Rust language and a Raspberry Pi in your car</del>?
 This project will leave you with a Raspberry Pi touchscreen that uses our <code>radar</code> and <code>dump1090_rs</code> applications to do just that!</p>
@@ -336,10 +336,10 @@ exec dwm
 <p>Simple Terminal.</p>
 <pre><code>&gt; apt install st
 </code></pre>
-<h3 id="a-hrefhttpsgithubcomrsadsbdump1090_rsdump1090_rsa-1"><a class="header" href="#a-hrefhttpsgithubcomrsadsbdump1090_rsdump1090_rsa-1"><a href="https://github.com/rsadsb/dump1090_rs">dump1090_rs</a></a></h3>
+<h3 id="a-hrefhttpsgithubcomrsadsbdump1090_rsdump1090a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbdump1090_rsdump1090a"><a href="https://github.com/rsadsb/dump1090_rs">dump1090</a></a></h3>
 <h4 id="systemd"><a class="header" href="#systemd">systemd</a></h4>
-<p>This will start <code>dump1090_rs</code> and attach to an SDR at every bootup.
-Note you will need to change <code>ExecStart</code> and <code>WorkingDirectory</code> to whatever location you installed <code>dump1090_rs</code> to.</p>
+<p>This will start <code>dump1090</code> and attach to an SDR at every bootup.
+Note you will need to change <code>ExecStart</code> and <code>WorkingDirectory</code> to whatever location you installed <code>dump1090</code> to.</p>
 <pre><code>&gt; cat /etc/systemd/system/dump1090.service
 [Unit]
 Description=Start ADS-B Demodulation Server
@@ -358,7 +358,7 @@ StandardOutput=syslog
 StandardErorr=syslog
 SyslogIdentifier=%n
 </code></pre>
-<pre><code>&gt; systemctl enable --now dump1090_rs
+<pre><code>&gt; systemctl enable --now dump1090
 </code></pre>
 <h3 id="a-hrefhttpsgithubcomrsadsbadsb_dekuradara-1"><a class="header" href="#a-hrefhttpsgithubcomrsadsbadsb_dekuradara-1"><a href="https://github.com/rsadsb/adsb_deku">radar</a></a></h3>
 <h4 id="autostart"><a class="header" href="#autostart">autostart</a></h4>
