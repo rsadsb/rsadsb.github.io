@@ -1,5 +1,5 @@
 # Raspberry Pi in-car ADS-B Display - with Rust!
-_last edited: 03/04/22_
+_last edited: 03/26/22_
 
 Do you have aircraft flying above your car, or just want to see all the aircraft around your area as you sit in the passenger seat
 ~~or just really nerdy and want to use the Rust language and a Raspberry Pi in your car~~?
@@ -107,10 +107,10 @@ Simple Terminal.
 > apt install st
 ```
 
-### [dump1090_rs](https://github.com/rsadsb/dump1090_rs)
+### [dump1090](https://github.com/rsadsb/dump1090_rs)
 #### systemd
-This will start `dump1090_rs` and attach to an SDR at every bootup.
-Note you will need to change `ExecStart` and `WorkingDirectory` to whatever location you installed `dump1090_rs` to.
+This will start `dump1090` and attach to an SDR at every bootup.
+Note you will need to change `ExecStart` and `WorkingDirectory` to whatever location you installed `dump1090` to.
 ```
 > cat /etc/systemd/system/dump1090.service
 [Unit]
@@ -132,7 +132,7 @@ SyslogIdentifier=%n
 ```
 
 ```
-> systemctl enable --now dump1090_rs
+> systemctl enable --now dump1090
 ```
 
 ### [radar](https://github.com/rsadsb/adsb_deku)
