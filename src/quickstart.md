@@ -39,8 +39,6 @@ You will need to install the `soapysdr` library, plus the `soapysdr` driver for 
 Searching for `soapysdr-rtlsdr` and `soapysdr` should lead you on the right path.
 The `soapysdr` library can be foud as `libsoapysdr-dev` on ubuntu based systems.
 
-Install `libclang`, found as `libclang-dev` on ubuntu.
-
 ## From Releases (`x86_64`)
 Binaries can be downloaded from the latest releases of our software on github.
 The following is an example for `x86_64`.
@@ -76,6 +74,8 @@ The current msrv(minimum supported rust version) is `1.59.0`.
 ### Install soapysdr library
 You will need the soapysdr library. For example, this is `libsoapysdr-dev` on ubuntu based platforms.
 
+### Clang
+Install `libclang`, found as `libclang-dev` on ubuntu.
 
 ### [dump1090_rs](https://github.com/rsadsb/dump1090_rs) from master branch
 ```shell

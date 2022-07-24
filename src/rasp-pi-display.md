@@ -62,10 +62,42 @@ Using the `radar --gpsd` option and a `gpsd` daemon, we automatically get the la
 You will need to following the instructions located on the adafruit site for installing the touchscreen drivers:
 [link](https://learn.adafruit.com/adafruit-pitft-3-dot-5-touch-screen-for-raspberry-pi)
 
+Add `        Option "TransformationMatrix" "0 -1 1 1 0 0 0 0 1"` to `touchscreen` in `/usr/share/X11/xorg.conf.d/40-libinput.conf` for inverting the touchscreen input 90 degrees.
+
+### SoapySDR
+We need soapysdr version 0.8.1, so install from the following commands.
+
+#### SoapySDR
+```
+> git clone https://github.com/pothosware/SoapySDR.git
+> cd SoapySDR
+> git checkout soapy-sdr-0.8.1
+> mkdir build
+> cd build
+> cmake ../
+> make -j4
+> make install
+> ldconfig
+```
+
+#### SoapyRTLSDR
+```
+> apt install librtlsdr-dev
+> git clone https://github.com/pothosware/SoapyRTLSDR.git
+> git checkout git checkout soapy-rtl-sdr-0.3.3
+> mkdir build
+> cd build
+> cmake ../
+> make -j4
+> make install
+> ldconfig
+```
+
 ### gpsd
 To use the `radar` `--gpsd` setting, you will need the GPS daemon installed. This works nicely when you are in a car, since the GPS will take care of always setting your new lat/lon position.
 ```shell
 > apt install gpsd
+> systemctl enable --now gpsd
 ```
 
 Add your USB device to the config, for example adding a serial USB GPS device `/dev/ttyUSB0`.
@@ -78,7 +110,7 @@ DEVICES="/dev/ttyUSB0"
 USBAUTO="true"
 ```
 
-Restart the gpsd service, or start it if not running.
+Restart the gpsd service after changing the config.
 ```
 > systemctl restart gpsd
 ```
@@ -87,6 +119,7 @@ This is the simplest X server display manager I can find, leaving our applicatio
 the small ARM processor on board the raspberry pi. I also used a patch that adds an autostart script.
 
 ```shell
+> apt install libx11-dev libxft-dev libxinerama-dev xinit
 > git clone https://git.suckless.org/dwm
 > curl -O https://dwm.suckless.org/patches/autostart/dwm-autostart-20210120-cb3f58a.diff
 > git apply dwm-autostart-20210120-cb3f58a.diff
@@ -99,6 +132,18 @@ raspberry pi and run `startx` to start dwm.
 ```shell
 > cat ~/.Xinitrc
 exec dwm
+```
+
+Add the following to `/etc/profile` for starting dwm at login:
+```
+if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+  exec startx
+fi
+```
+
+If you want to disable the dwm topbar as I have, modify this in the `config.h`:
+```
+static const int showbar            = 0;
 ```
 
 ### st
