@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="home.html">Home</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="quickstart.html"><strong aria-hidden="true">1.</strong> Quick Start</a></li><li class="chapter-item expanded "><a href="rasp-pi-display.html" class="active"><strong aria-hidden="true">2.</strong> Raspberry Pi in-car ADS-B Display - with Rust!</a></li><li class="chapter-item expanded "><a href="rsadsb_releases.html"><strong aria-hidden="true">3.</strong> rsadsb Release Notes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="v0.5.1.html"><strong aria-hidden="true">3.1.</strong> v0.5.1</a></li><li class="chapter-item expanded "><a href="v0.5.0.html"><strong aria-hidden="true">3.2.</strong> v0.5.0</a></li><li class="chapter-item expanded "><a href="v0.4.0.html"><strong aria-hidden="true">3.3.</strong> v0.4.0</a></li></ol></li><li class="chapter-item expanded "><a href="thanks.html"><strong aria-hidden="true">4.</strong> Thanks</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="home.html">Home</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="quickstart.html">Quick Start</a></li><li class="chapter-item expanded "><a href="rsadsb_releases.html"><strong aria-hidden="true">1.</strong> rsadsb Release Notes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="v0.6.0.html"><strong aria-hidden="true">1.1.</strong> v0.6.0</a></li><li class="chapter-item expanded "><a href="v0.5.1.html"><strong aria-hidden="true">1.2.</strong> v0.5.1</a></li><li class="chapter-item expanded "><a href="v0.5.0.html"><strong aria-hidden="true">1.3.</strong> v0.5.0</a></li><li class="chapter-item expanded "><a href="v0.4.0.html"><strong aria-hidden="true">1.4.</strong> v0.4.0</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Blog</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="rasp-pi-display.html" class="active">Raspberry Pi in-car ADS-B Display - with Rust!</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="thanks.html">Thanks</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -191,9 +191,35 @@ This project will leave you with a Raspberry Pi touchscreen that uses our <code>
 <h3 id="pitft-plus"><a class="header" href="#pitft-plus">PiTFT Plus</a></h3>
 <p>You will need to following the instructions located on the adafruit site for installing the touchscreen drivers:
 <a href="https://learn.adafruit.com/adafruit-pitft-3-dot-5-touch-screen-for-raspberry-pi">link</a></p>
+<p>Add <code>        Option &quot;TransformationMatrix&quot; &quot;0 -1 1 1 0 0 0 0 1&quot;</code> to <code>touchscreen</code> in <code>/usr/share/X11/xorg.conf.d/40-libinput.conf</code> for inverting the touchscreen input 90 degrees.</p>
+<h3 id="soapysdr"><a class="header" href="#soapysdr">SoapySDR</a></h3>
+<p>We need soapysdr version 0.8.1, so install from the following commands.</p>
+<h4 id="soapysdr-1"><a class="header" href="#soapysdr-1">SoapySDR</a></h4>
+<pre><code>&gt; git clone https://github.com/pothosware/SoapySDR.git
+&gt; cd SoapySDR
+&gt; git checkout soapy-sdr-0.8.1
+&gt; mkdir build
+&gt; cd build
+&gt; cmake ../
+&gt; make -j4
+&gt; make install
+&gt; ldconfig
+</code></pre>
+<h4 id="soapyrtlsdr"><a class="header" href="#soapyrtlsdr">SoapyRTLSDR</a></h4>
+<pre><code>&gt; apt install librtlsdr-dev
+&gt; git clone https://github.com/pothosware/SoapyRTLSDR.git
+&gt; git checkout git checkout soapy-rtl-sdr-0.3.3
+&gt; mkdir build
+&gt; cd build
+&gt; cmake ../
+&gt; make -j4
+&gt; make install
+&gt; ldconfig
+</code></pre>
 <h3 id="gpsd"><a class="header" href="#gpsd">gpsd</a></h3>
 <p>To use the <code>radar</code> <code>--gpsd</code> setting, you will need the GPS daemon installed. This works nicely when you are in a car, since the GPS will take care of always setting your new lat/lon position.</p>
 <pre><code class="language-shell">&gt; apt install gpsd
+&gt; systemctl enable --now gpsd
 </code></pre>
 <p>Add your USB device to the config, for example adding a serial USB GPS device <code>/dev/ttyUSB0</code>.</p>
 <pre><code class="language-shell">&gt; cat /etc/default/gpsd
@@ -203,13 +229,14 @@ GPSD_OPTIONS=&quot;&quot;
 DEVICES=&quot;/dev/ttyUSB0&quot;
 USBAUTO=&quot;true&quot;
 </code></pre>
-<p>Restart the gpsd service, or start it if not running.</p>
+<p>Restart the gpsd service after changing the config.</p>
 <pre><code>&gt; systemctl restart gpsd
 </code></pre>
 <h3 id="dwm"><a class="header" href="#dwm">dwm</a></h3>
 <p>This is the simplest X server display manager I can find, leaving our applications running nicely with
 the small ARM processor on board the raspberry pi. I also used a patch that adds an autostart script.</p>
-<pre><code class="language-shell">&gt; git clone https://git.suckless.org/dwm
+<pre><code class="language-shell">&gt; apt install libx11-dev libxft-dev libxinerama-dev xinit
+&gt; git clone https://git.suckless.org/dwm
 &gt; curl -O https://dwm.suckless.org/patches/autostart/dwm-autostart-20210120-cb3f58a.diff
 &gt; git apply dwm-autostart-20210120-cb3f58a.diff
 &gt; make
@@ -219,6 +246,14 @@ the small ARM processor on board the raspberry pi. I also used a patch that adds
 raspberry pi and run <code>startx</code> to start dwm.</p>
 <pre><code class="language-shell">&gt; cat ~/.Xinitrc
 exec dwm
+</code></pre>
+<p>Add the following to <code>/etc/profile</code> for starting dwm at login:</p>
+<pre><code>if [ -z &quot;${DISPLAY}&quot; ] &amp;&amp; [ &quot;${XDG_VTNR}&quot; -eq 1 ]; then
+  exec startx
+fi
+</code></pre>
+<p>If you want to disable the dwm topbar as I have, modify this in the <code>config.h</code>:</p>
+<pre><code>static const int showbar            = 0;
 </code></pre>
 <h3 id="st"><a class="header" href="#st">st</a></h3>
 <p>Simple Terminal.</p>
@@ -257,6 +292,7 @@ If you want more airports, check out the <code>--aiports</code> option: <a href=
 #!/usr/bin/sh
 st -e ~/.cargo/bin/radar --lat=&quot;39.0&quot; --long=&quot;-84.00&quot; --scale=&quot;0.80&quot; \
 --gpsd --disable-lat-long \
+--display-callsign \
 --touchscreen \
 --locations &quot;(wpafb,39.827793,-84.045894)&quot; &quot;(KMGY,39.591672,-84.227865)&quot; \
 &quot;(DAY,39.898899,-84.2287941)&quot; &quot;(CVG,39.0537296,-84.6500094)&quot; &quot;(CMH,39.9999399,-82.8893654)&quot; \
@@ -278,11 +314,11 @@ st -e ~/.cargo/bin/radar --lat=&quot;39.0&quot; --long=&quot;-84.00&quot; --scal
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                                                    <a rel="prev" href="quickstart.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                                    <a rel="prev" href="v0.4.0.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
-                                                    <a rel="next" href="rsadsb_releases.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                                    <a rel="next" href="thanks.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -292,11 +328,11 @@ st -e ~/.cargo/bin/radar --lat=&quot;39.0&quot; --long=&quot;-84.00&quot; --scal
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                                    <a rel="prev" href="quickstart.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                    <a rel="prev" href="v0.4.0.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
-                                    <a rel="next" href="rsadsb_releases.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                    <a rel="next" href="thanks.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                             </nav>

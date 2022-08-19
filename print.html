@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="home.html">Home</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="quickstart.html"><strong aria-hidden="true">1.</strong> Quick Start</a></li><li class="chapter-item expanded "><a href="rasp-pi-display.html"><strong aria-hidden="true">2.</strong> Raspberry Pi in-car ADS-B Display - with Rust!</a></li><li class="chapter-item expanded "><a href="rsadsb_releases.html"><strong aria-hidden="true">3.</strong> rsadsb Release Notes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="v0.5.1.html"><strong aria-hidden="true">3.1.</strong> v0.5.1</a></li><li class="chapter-item expanded "><a href="v0.5.0.html"><strong aria-hidden="true">3.2.</strong> v0.5.0</a></li><li class="chapter-item expanded "><a href="v0.4.0.html"><strong aria-hidden="true">3.3.</strong> v0.4.0</a></li></ol></li><li class="chapter-item expanded "><a href="thanks.html"><strong aria-hidden="true">4.</strong> Thanks</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="home.html">Home</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="quickstart.html">Quick Start</a></li><li class="chapter-item expanded "><a href="rsadsb_releases.html"><strong aria-hidden="true">1.</strong> rsadsb Release Notes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="v0.6.0.html"><strong aria-hidden="true">1.1.</strong> v0.6.0</a></li><li class="chapter-item expanded "><a href="v0.5.1.html"><strong aria-hidden="true">1.2.</strong> v0.5.1</a></li><li class="chapter-item expanded "><a href="v0.5.0.html"><strong aria-hidden="true">1.3.</strong> v0.5.0</a></li><li class="chapter-item expanded "><a href="v0.4.0.html"><strong aria-hidden="true">1.4.</strong> v0.4.0</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Blog</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="rasp-pi-display.html">Raspberry Pi in-car ADS-B Display - with Rust!</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="thanks.html">Thanks</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -164,9 +164,11 @@ A Rust software suite for ADS-B demodulation, decoding, and processing.</p>
 <p>See <a href="quickstart.html">quickstart</a> for the easy installation process.</p>
 <h2 id="latest-release"><a class="header" href="#latest-release">Latest Release</a></h2>
 <h3 id="major"><a class="header" href="#major">Major</a></h3>
-<p><a href="v0.5.0.html">v0.5.0</a></p>
-<h3 id="minor"><a class="header" href="#minor">Minor</a></h3>
-<p><a href="v0.5.1.html">v0.5.1</a></p>
+<p><a href="v0.6.0.html">v0.6.0</a></p>
+<!--
+### Minor
+[v0.5.1](v0.5.1.md)
+-->
 <h2 id="news"><a class="header" href="#news">News</a></h2>
 <ul>
 <li><strong>rtl-sdr.com 2/15/2020:</strong>
@@ -200,27 +202,26 @@ The <code>rtlsdr</code> should be plugged into your computer's USB port.</p>
 as well as forwarding the bytes to our application.</p>
 <h3 id="a-hrefhttpsgithubcomrsadsbadsb_dekuradara"><a class="header" href="#a-hrefhttpsgithubcomrsadsbadsb_dekuradara"><a href="https://github.com/rsadsb/adsb_deku">radar</a></a></h3>
 <p><code>radar</code> parses the ADS-B messages into data that can be displayed on a map.</p>
-<p><img src="https://raw.githubusercontent.com/rsadsb/adsb_deku/master/media/peek_2022_02_06_02_640_640.gif" alt="image" /></p>
+<p><img src="https://github.com/rsadsb/adsb_deku/raw/master/media/peek_2022_08_19.gif" alt="image" /></p>
 <h2 id="linux-dependencies"><a class="header" href="#linux-dependencies">Linux dependencies</a></h2>
 <p>You will need to install the <code>soapysdr</code> library, plus the <code>soapysdr</code> driver for your SDR(rtlsdr).
 Searching for <code>soapysdr-rtlsdr</code> and <code>soapysdr</code> should lead you on the right path.
 The <code>soapysdr</code> library can be foud as <code>libsoapysdr-dev</code> on ubuntu based systems.</p>
-<p>Install <code>libclang</code>, found as <code>libclang-dev</code> on ubuntu.</p>
 <h2 id="from-releases-x86_64"><a class="header" href="#from-releases-x86_64">From Releases (<code>x86_64</code>)</a></h2>
 <p>Binaries can be downloaded from the latest releases of our software on github.
 The following is an example for <code>x86_64</code>.</p>
 <pre><code># download dump1090_rs
-&gt; wget https://github.com/rsadsb/dump1090_rs/releases/download/v0.5.1/dump1090_rs-x86_64-unknown-linux-gnu.tar.gz
+&gt; wget https://github.com/rsadsb/dump1090_rs/releases/download/v0.6.0/dump1090_rs-x86_64-unknown-linux-gnu.tar.gz
 &gt; tar -xf dump1090_rs-x86_64-unknown-linux-gnu.tar.gz
 
 # download radar
-&gt; wget https://github.com/rsadsb/adsb_deku/releases/download/v0.5.1/radar-x86_64-unknown-linux-gnu.tar.gz
+&gt; wget https://github.com/rsadsb/adsb_deku/releases/download/v0.6.0/radar-x86_64-unknown-linux-gnu.tar.gz
 &gt; tar -xf radar-x86_64-unknown-linux-gnu.tar.gz
 </code></pre>
 <p><code>ARM</code> releases are also available:</p>
 <ul>
-<li><a href="https://github.com/rsadsb/dump1090_rs/releases/tag/v0.5.1">dump1090_rs</a></li>
-<li><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v0.5.1">radar</a></li>
+<li><a href="https://github.com/rsadsb/dump1090_rs/releases/tag/v0.6.0">dump1090_rs</a></li>
+<li><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v0.6.0">radar</a></li>
 </ul>
 <h2 id="optional-install-from-source-for-max-performance"><a class="header" href="#optional-install-from-source-for-max-performance">(Optional) Install from source for max performance</a></h2>
 <details>
@@ -234,6 +235,8 @@ These are currently only detected at compile time and is the reason for <code>RU
 The current msrv(minimum supported rust version) is <code>1.59.0</code>.</p>
 <h3 id="install-soapysdr-library"><a class="header" href="#install-soapysdr-library">Install soapysdr library</a></h3>
 <p>You will need the soapysdr library. For example, this is <code>libsoapysdr-dev</code> on ubuntu based platforms.</p>
+<h3 id="clang"><a class="header" href="#clang">Clang</a></h3>
+<p>Install <code>libclang</code>, found as <code>libclang-dev</code> on ubuntu.</p>
 <h3 id="a-hrefhttpsgithubcomrsadsbdump1090_rsdump1090_rsa-from-master-branch"><a class="header" href="#a-hrefhttpsgithubcomrsadsbdump1090_rsdump1090_rsa-from-master-branch"><a href="https://github.com/rsadsb/dump1090_rs">dump1090_rs</a> from master branch</a></h3>
 <pre><code class="language-shell">RUSTFLAGS=&quot;-C target-cpu=native&quot; cargo install --git https://github.com/rsadsb/dump1090_rs
 </code></pre>
@@ -256,6 +259,228 @@ See <a href="rasp-pi-display.html">Raspberry Pi in-car ADS-B Display - with Rust
 <li>Open up a discussion on <a href="https://github.com/rsadsb/adsb_deku/discussions">rsadsb/adsb_deku</a> for <code>radar</code> help.</li>
 <li>Open up a discussion on <a href="https://github.com/rsadsb/dump1090_rs/discussions">rsadsb/dump1090_rs</a> for <code>dump1090_rs</code> help.</li>
 <li>You can also email me @ <code>wcampbell1995[dot]gmail[dot]com</code>.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="rsadsb-releases"><a class="header" href="#rsadsb-releases">rsadsb Releases</a></h1>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/rsadsb/adsb_deku/master/media/logo.png")
+</p>
+<ul>
+<li><a href="v0.6.0.html">v0.6.0</a></li>
+<li><a href="v0.5.1.html">v0.5.1</a></li>
+<li><a href="v0.5.0.html">v0.5.0</a></li>
+<li><a href="v0.4.0.html">v0.4.0</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="v060-release-notes---aug-19-2022"><a class="header" href="#v060-release-notes---aug-19-2022">v0.6.0 Release Notes - Aug 19, 2022</a></h1>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/rsadsb/adsb_deku/master/media/logo.png")
+</p>
+<p>Happy US national aviation day!</p>
+<p><a href="https://github.com/rsadsb">rsadsb</a> is happy to announce v0.6.0 of our library and tools.
+We're proud to have over 200 stars on the main repo, thanks for the support!
+A huge <a href="thanks.html">thanks</a> to all.</p>
+<p>See <a href="quickstart.html">quickstart guide</a> for a installation guide.</p>
+<h2 id="links--changelogs"><a class="header" href="#links--changelogs">Links / Changelogs</a></h2>
+<p>All code is released under the <a href="https://github.com/rsadsb">github/rsadsb</a> account.
+Release binaries are available at the following links.</p>
+<h3 id="a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv060adsb_deku-v060a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv060adsb_deku-v060a"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v0.6.0">adsb_deku v0.6.0</a></a></h3>
+<p>See <a href="https://github.com/rsadsb/adsb_deku/blob/v0.6.0/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on <code>adsb_deku</code> libraries, <code>radar</code>, and <code>1090</code>. </p>
+<p>The library docs.rs documentation for this release is <a href="https://docs.rs/adsb_deku/0.6.0/adsb_deku/">here</a></p>
+<h3 id="a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv060dump1090_rs-v060a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv060dump1090_rs-v060a"><a href="https://github.com/rsadsb/dump1090_rs/releases/tag/v0.6.0">dump1090_rs v0.6.0</a></a></h3>
+<p>See <a href="https://github.com/rsadsb/dump1090_rs/blob/v0.6.0/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on the <code>dump1090_rs</code> application. </p>
+<h2 id="discuss"><a class="header" href="#discuss">Discuss</a></h2>
+<h2 id="news-1"><a class="header" href="#news-1">News</a></h2>
+<h2 id="radar"><a class="header" href="#radar">radar</a></h2>
+<p><img src="https://github.com/rsadsb/adsb_deku/raw/master/media/peek_2022_08_19.gif" alt="video" /></p>
+<h3 id="updates"><a class="header" href="#updates">Updates</a></h3>
+<ul>
+<li>Added optionally showing tail numbers (Callsign) instead of ICAO hex callsign by using <code>--display-callsign</code> or <code>n</code> while in the Map screen.</li>
+<li>Added Track support, for showing the previous positions of aircraft that are stored in memory.</li>
+<li>Added Heading support, for showing which direction an airplane is headings by displaying an arrow.</li>
+<li>Added <code>--retry-tcp</code>, for automatic re-trying to connect to a <code>dump1090</code> instance without losing data.</li>
+<li>Added stats page, currently with <code>Max Distance</code>, <code>Most Airplanes</code>, and <code>Total Airplanes Tracked</code>.</li>
+<li>Added <code>aarch64-unknown-linux-gnu</code> target build in CI for Raspberry Pi 64-bit support.</li>
+<li>Added key: <code>i</code> to trigger disable of ICAO names above aircraft positions.</li>
+<li>Release binary is now stripped. ~2.26MB -&gt; ~1.24MB. MSRV is bumped to <code>1.59</code>.</li>
+<li>Various bug fixes! Thanks (<a href="https://github.com/andelf">@andelf</a>) and (<a href="https://github.com/paunstefan">@paunstefan</a>).</li>
+<li>Reduce precision of all <code>f32</code>s to 3. (for longitude, latitude, heading displays). (cue relevant <a href="https://xkcd.com/2170/">xkcd</a>)
+<img src="https://imgs.xkcd.com/comics/coordinate_precision.png" alt="picture" /></li>
+</ul>
+<h2 id="dump1090"><a class="header" href="#dump1090">dump1090</a></h2>
+<h3 id="updates-1"><a class="header" href="#updates-1">Updates</a></h3>
+<ul>
+<li>Added <code>aarch64-unknown-linux-gnu</code> support for Raspberry Pi 64-bit support.</li>
+<li>Support <code>--custom-config</code> for custom SDR settings using the soapysdr API.</li>
+<li>Improve performance by 11%, from 3.4ms for a 512KB iq sample to 3.0ms.</li>
+<li>Pushed new docker images for CI building: <a href="https://hub.docker.com/repository/docker/rsadsb/ci/tags?page=1&amp;ordering=last_updated&amp;name=0.2.0">hub.docker.com</a>.</li>
+</ul>
+<h2 id="adsb_deku"><a class="header" href="#adsb_deku">adsb_deku</a></h2>
+<ul>
+<li><code>no_std</code> support added, and many more improvements to the correctness of the message parsing</li>
+</ul>
+<h2 id="rsadsb_common"><a class="header" href="#rsadsb_common">rsadsb_common</a></h2>
+<ul>
+<li>New library, with common code and data structures that are needed for creating your own <code>adsb_deku</code> ecosystem application</li>
+<li>This library also supports <code>no_std</code> environments</li>
+</ul>
+<h2 id="rsadsb-embedded"><a class="header" href="#rsadsb-embedded">rsadsb-embedded</a></h2>
+<p>We experimented on running our libraries for <code>no_std</code> environments, such as the <a href="https://microbit.org/">microbit v2</a> and the <a href="https://www.st.com/en/evaluation-tools/stm32-discovery-kits.html">std32f3discovery</a>.
+You can find that code <a href="https://github.com/wcampbell0x2a/rsadsb-embedded">here</a>.</p>
+<p><img src="https://github.com/wcampbell0x2a/rsadsb-embedded/raw/master/media/microbitv2_03_20_22.gif" alt="video" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="v051-release-notes---feb-13-2022"><a class="header" href="#v051-release-notes---feb-13-2022">v0.5.1 Release Notes - Feb 13, 2022</a></h1>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/rsadsb/adsb_deku/master/media/logo.png")
+</p>
+<p>Minor bugfix to the <code>radar</code> application.</p>
+<h2 id="links--changelogs-1"><a class="header" href="#links--changelogs-1">Links / Changelogs</a></h2>
+<p>All code is released under the <a href="https://github.com/rsadsb">github/rsadsb</a> account.
+Release binaries are available at the following links.</p>
+<h3 id="a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv051adsb_deku-v051a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv051adsb_deku-v051a"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v0.5.1">adsb_deku v0.5.1</a></a></h3>
+<p>See <a href="https://github.com/rsadsb/adsb_deku/blob/v0.5.1/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on <code>adsb_deku</code> library, <code>radar</code>, and <code>1090</code>. </p>
+<p>The library docs.rs documentation for this release is <a href="https://docs.rs/adsb_deku/0.5.1/adsb_deku/">here</a></p>
+<h3 id="a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv051dump1090_rs-v051a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv051dump1090_rs-v051a"><a href="https://github.com/rsadsb/dump1090_rs/releases/tag/v0.5.1">dump1090_rs v0.5.1</a></a></h3>
+<p>See <a href="https://github.com/rsadsb/dump1090_rs/blob/v0.5.1/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on the <code>dump1090_rs</code> application. </p>
+<h2 id="radar-1"><a class="header" href="#radar-1">radar</a></h2>
+<ul>
+<li>fix: Swap <code>Airplanes</code> table &quot;Latitude&quot; and &quot;Longitude&quot;, found by reddit user @BanksOfTheOuchita (<a href="https://github.com/rsadsb/adsb_deku/pull/111">!111</a>)</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="v050-release-notes---feb-12-2022"><a class="header" href="#v050-release-notes---feb-12-2022">v0.5.0 Release Notes - Feb 12, 2022</a></h1>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/rsadsb/adsb_deku/master/media/logo.png")
+</p>
+<p><a href="https://github.com/rsadsb">rsadsb</a> is happy to announce v0.5.0 of our library and tools.
+We're proud to have over 100 stars on the main repo, thanks for the support!
+A huge <a href="thanks.html">thanks</a> to all.</p>
+<p>See <a href="quickstart.html">quickstart guide</a> for a installation guide.</p>
+<p>See <a href="rasp-pi-display.html">Raspberry Pi in-car ADS-B Display - with Rust!</a> for my blog post on using my libraries and applications for an in-car ADS-B display.</p>
+<p>If you want to track Elon Musk with Rust, check <a href="https://github.com/rsadsb/elons-jets-rs">this repo</a> out ;)</p>
+<h2 id="links--changelogs-2"><a class="header" href="#links--changelogs-2">Links / Changelogs</a></h2>
+<p>All code is released under the <a href="https://github.com/rsadsb">github/rsadsb</a> account.
+Release binaries are available at the following links.</p>
+<h3 id="a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv050adsb_deku-v050a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv050adsb_deku-v050a"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v0.5.0">adsb_deku v0.5.0</a></a></h3>
+<p>See <a href="https://github.com/rsadsb/adsb_deku/blob/v0.5.0/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on <code>adsb_deku</code> library, <code>radar</code>, and <code>1090</code>. </p>
+<p>The library docs.rs documentation for this release is <a href="https://docs.rs/adsb_deku/0.5.0/adsb_deku/">here</a></p>
+<h3 id="a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv050dump1090_rs-v050a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv050dump1090_rs-v050a"><a href="https://github.com/rsadsb/dump1090_rs/releases/tag/v0.5.0">dump1090_rs v0.5.0</a></a></h3>
+<p>See <a href="https://github.com/rsadsb/dump1090_rs/blob/v0.5.0/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on the <code>dump1090_rs</code> application. </p>
+<h2 id="discuss-1"><a class="header" href="#discuss-1">Discuss</a></h2>
+<ul>
+<li><a href="https://www.reddit.com/r/rust/comments/sr4ara/raspberry_pi_incar_adsb_display_with_rust/">/r/rust</a></li>
+<li><a href="https://twitter.com/wcampbell42/status/1492607956294250505">twitter</a></li>
+</ul>
+<h2 id="news-2"><a class="header" href="#news-2">News</a></h2>
+<ul>
+<li><strong>rtl-sdr.com 2/15/2020:</strong> <a href="https://www.rtl-sdr.com/rsadsb-terminal-based-aircraft-radar-on-the-raspberry-pi">rsadsb: Terminal Based Aircraft Radar on the Raspberry Pi</a>
+<ul>
+<li><a href="https://twitter.com/rtlsdrblog/status/1493415462780104706">twitter</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong>myraidRF OTA 2/25/2020:</strong> <a href="https://myriadrf.org/news/ota-ads-b-tracking-at-the-terminal-open-ran-silicon-beginners-guides-and-more/">OTA: ADS-B Tracking at the Terminal, Open RAN Silicon, Beginner’s Guides, and More</a>
+<ul>
+<li><a href="https://twitter.com/MyriadRF/status/1497257351128231950">twitter</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="radar-2"><a class="header" href="#radar-2">radar</a></h2>
+<p><code>x86_64-unknown-linux-gnu</code>
+<img src="media/radar_main_v0.5.0.gif" alt="video" /></p>
+<p><code>armv7-unknown-linux-gnueabihf</code>
+<img src="https://raw.githubusercontent.com/rsadsb/adsb_deku/master/media/peek_2022_02_06_02_640_640.gif" alt="image" /></p>
+<p><code>aarch64-linux-android</code>
+<img src="media/Screenshot_20220212-133517.jpg" alt="image" /></p>
+<h3 id="updates-2"><a class="header" href="#updates-2">Updates</a></h3>
+<ul>
+<li>
+<p>Now uses Mercator projection for display the airplanes on the map.</p>
+</li>
+<li>
+<p>Add Mouse and touchscreen controls! This allows moving the map center location, as well as choosing the display mode.
+See the <code>--touchscreen</code> option for displaying zoom controls for platforms such as the raspberry pi.
+<img src="https://user-images.githubusercontent.com/15236002/151737937-96d8fdc9-85e8-4b0c-b1e1-5499162bcad7.png" alt="image" /></p>
+</li>
+<li>
+<p>Airport data can be downloaded from <a href="https://github.com/mborsetti/airportsdata">mborsetti/airportsdata</a>
+and imported using the <code>--airports</code> and <code>--airports-tz-filter</code> option.
+The following shows all airports big and small near my data collection site.
+<img src="https://user-images.githubusercontent.com/15236002/151717559-c1692dc8-4ce7-42c6-bbe7-0bf9a24338ab.png" alt="image" />
+The following is an example of zooming out and seeing all New_York and Chicago time zone airports.
+This looks pretty cool even if it's very not useful :)
+<img src="https://user-images.githubusercontent.com/15236002/151717578-f3ef5024-fd0b-4b1e-9d06-f40cc2f5df25.png" alt="image" />
+And Coverage!
+<img src="media/2022-02-01-224808_987x815_scrot.png" alt="image" /></p>
+</li>
+<li>
+<p><code>--cities</code> are now named <code>--locations</code></p>
+</li>
+<li>
+<p>Range and Distance checks are now added, fixing some long standing bugs with mis-decoding lat/lon positions.
+(<a href="https://github.com/rsadsb/adsb_deku/pull/101">!101</a>)</p>
+</li>
+<li>
+<p>Added <code>Help</code> tab with a table of key bindings: (<a href="https://github.com/rsadsb/adsb_deku/pull/107">!107</a>)</p>
+</li>
+<li>
+<p>Thanks <a href="https://github.com/Jachdich">@Jachdich</a> for fixing a bug in <code>radar</code> with time: (<a href="https://github.com/rsadsb/adsb_deku/pull/57">!57</a>)</p>
+</li>
+</ul>
+<h2 id="adsb_deku-library"><a class="header" href="#adsb_deku-library">adsb_deku (library)</a></h2>
+<ul>
+<li>Thanks <a href="https://github.com/amacd31">@amacd31</a> for fixing a bug in CPR calculations.
+(<a href="https://github.com/rsadsb/adsb_deku/pull/78">!78</a>).</li>
+<li>Thanks <a href="https://github.com/mikemorris">@mikemorris</a> for fixing a link in my README.md.
+(<a href="https://github.com/rsadsb/adsb_deku/pull/61">!61</a>).</li>
+</ul>
+<h2 id="dump1090-1"><a class="header" href="#dump1090-1">dump1090</a></h2>
+<ul>
+<li>Now uses the <a href="https://github.com/pothosware/SoapySDR">soapysdr</a> library for multi-sdr platforms
+support through the <a href="https://github.com/kevinmehall/rust-soapysdr">soapysdr-rs</a> crate.
+Currently tested are the rtl-sdr and the hackrf support.
+If you test this on new SDR platforms, merge requests welcome for default gain settings!</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="v040-release-notes---dec-10-2021"><a class="header" href="#v040-release-notes---dec-10-2021">v0.4.0 Release Notes - Dec 10, 2021</a></h1>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/rsadsb/adsb_deku/master/media/logo.png")
+</p>
+<p><a href="https://github.com/rsadsb">rsadsb</a> is happy to announce v0.4.0 of our library and tools.
+This update focused on improving the accuracy of the library, as well as touching up the radar tui and
+improving performance.</p>
+<h3 id="a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv040adsb_deku-v040a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv040adsb_deku-v040a"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v0.4.0">adsb_deku v0.4.0</a></a></h3>
+<p>See <a href="https://github.com/rsadsb/adsb_deku/blob/v0.4.0/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on adsb_deku library, radar, and 1090. </p>
+<h3 id="a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv040dump1090_rs-v040a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv040dump1090_rs-v040a"><a href="https://github.com/rsadsb/dump1090_rs/releases/tag/v0.4.0">dump1090_rs v0.4.0</a></a></h3>
+<p>See <a href="https://github.com/rsadsb/dump1090_rs/blob/v0.4.0/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on the dump1090 application. </p>
+<h3 id="discuss-2"><a class="header" href="#discuss-2">Discuss</a></h3>
+<ul>
+<li><a href="https://www.reddit.com/r/rust/comments/rcig0o/media_view_airplanes_in_the_sky_with_rust/?utm_source=share&amp;utm_medium=web2x&amp;context=3">/r/rust post</a></li>
+<li><a href="https://www.reddit.com/r/RTLSDR/comments/rciosj/media_view_airplanes_in_the_sky_with_rust/?utm_source=share&amp;utm_medium=web2x&amp;context=3">/r/rtlsdr post</a></li>
+<li><a href="https://www.reddit.com/r/ADSB/comments/rciogi/media_view_airplanes_in_the_sky_with_rust/?utm_source=share&amp;utm_medium=web2x&amp;context=3">/r/adsb post</a></li>
+</ul>
+<h3 id="news-3"><a class="header" href="#news-3">News</a></h3>
+<ul>
+<li><a href="https://this-week-in-rust.org/blog/2021/12/15/this-week-in-rust-421/">This Week in Rust 421</a></li>
+</ul>
+<hr />
+<h2 id="radar-3"><a class="header" href="#radar-3">radar</a></h2>
+<p><img src="https://raw.githubusercontent.com/rsadsb/adsb_deku/master/media/2021_12_08.gif" alt="image" /></p>
+<h3 id="updates-3"><a class="header" href="#updates-3">Updates</a></h3>
+<p>Thank you to <a href="https://github.com/wiseman">@wiseman</a> for helping me develop features.</p>
+<ul>
+<li>The Tab key can now be used to change the view to the pane. </li>
+<li>Airplane display was added for a detailed display of all call signs, vertical speed, lat, long, and number of messages.</li>
+<li>Possible mis-decodes were reduced by reducing the trust of messages with a time gap.</li>
+<li>Dynamic Lat/Long positions are now possible if you have a gpsd server.</li>
+<li>Logging was added to <code>./logs</code> and can be controlled with the <code>RUST_LOG</code> env variable.</li>
+<li>A grayscale heatmap was added to the Coverage screen, giving the operator more detail on his sky coverage.</li>
+</ul>
+<h2 id="adsb_deku-library-1"><a class="header" href="#adsb_deku-library-1">adsb_deku (library)</a></h2>
+<p>The library itself was pretty stable for this release, just fixing some minor bugs with parsing and improving
+the documentation.</p>
+<p>The documentation for this release is <a href="https://docs.rs/adsb_deku/0.4.0/adsb_deku/">here</a></p>
+<h2 id="dump1090-2"><a class="header" href="#dump1090-2">dump1090</a></h2>
+<ul>
+<li>The library is now styled in such a way that be tested from iq data, this will help prove the applications state
+in the future.</li>
+<li><code>--host</code> and <code>--port</code> were added to control TCP.</li>
+<li>A good amount of time was given to make sure the application was release ready, this gave us around 9% faster demodulation and decode.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="raspberry-pi-in-car-ads-b-display---with-rust"><a class="header" href="#raspberry-pi-in-car-ads-b-display---with-rust">Raspberry Pi in-car ADS-B Display - with Rust!</a></h1>
 <p><em>last edited: 03/26/22</em></p>
@@ -303,9 +528,35 @@ This project will leave you with a Raspberry Pi touchscreen that uses our <code>
 <h3 id="pitft-plus"><a class="header" href="#pitft-plus">PiTFT Plus</a></h3>
 <p>You will need to following the instructions located on the adafruit site for installing the touchscreen drivers:
 <a href="https://learn.adafruit.com/adafruit-pitft-3-dot-5-touch-screen-for-raspberry-pi">link</a></p>
+<p>Add <code>        Option &quot;TransformationMatrix&quot; &quot;0 -1 1 1 0 0 0 0 1&quot;</code> to <code>touchscreen</code> in <code>/usr/share/X11/xorg.conf.d/40-libinput.conf</code> for inverting the touchscreen input 90 degrees.</p>
+<h3 id="soapysdr"><a class="header" href="#soapysdr">SoapySDR</a></h3>
+<p>We need soapysdr version 0.8.1, so install from the following commands.</p>
+<h4 id="soapysdr-1"><a class="header" href="#soapysdr-1">SoapySDR</a></h4>
+<pre><code>&gt; git clone https://github.com/pothosware/SoapySDR.git
+&gt; cd SoapySDR
+&gt; git checkout soapy-sdr-0.8.1
+&gt; mkdir build
+&gt; cd build
+&gt; cmake ../
+&gt; make -j4
+&gt; make install
+&gt; ldconfig
+</code></pre>
+<h4 id="soapyrtlsdr"><a class="header" href="#soapyrtlsdr">SoapyRTLSDR</a></h4>
+<pre><code>&gt; apt install librtlsdr-dev
+&gt; git clone https://github.com/pothosware/SoapyRTLSDR.git
+&gt; git checkout git checkout soapy-rtl-sdr-0.3.3
+&gt; mkdir build
+&gt; cd build
+&gt; cmake ../
+&gt; make -j4
+&gt; make install
+&gt; ldconfig
+</code></pre>
 <h3 id="gpsd"><a class="header" href="#gpsd">gpsd</a></h3>
 <p>To use the <code>radar</code> <code>--gpsd</code> setting, you will need the GPS daemon installed. This works nicely when you are in a car, since the GPS will take care of always setting your new lat/lon position.</p>
 <pre><code class="language-shell">&gt; apt install gpsd
+&gt; systemctl enable --now gpsd
 </code></pre>
 <p>Add your USB device to the config, for example adding a serial USB GPS device <code>/dev/ttyUSB0</code>.</p>
 <pre><code class="language-shell">&gt; cat /etc/default/gpsd
@@ -315,13 +566,14 @@ GPSD_OPTIONS=&quot;&quot;
 DEVICES=&quot;/dev/ttyUSB0&quot;
 USBAUTO=&quot;true&quot;
 </code></pre>
-<p>Restart the gpsd service, or start it if not running.</p>
+<p>Restart the gpsd service after changing the config.</p>
 <pre><code>&gt; systemctl restart gpsd
 </code></pre>
 <h3 id="dwm"><a class="header" href="#dwm">dwm</a></h3>
 <p>This is the simplest X server display manager I can find, leaving our applications running nicely with
 the small ARM processor on board the raspberry pi. I also used a patch that adds an autostart script.</p>
-<pre><code class="language-shell">&gt; git clone https://git.suckless.org/dwm
+<pre><code class="language-shell">&gt; apt install libx11-dev libxft-dev libxinerama-dev xinit
+&gt; git clone https://git.suckless.org/dwm
 &gt; curl -O https://dwm.suckless.org/patches/autostart/dwm-autostart-20210120-cb3f58a.diff
 &gt; git apply dwm-autostart-20210120-cb3f58a.diff
 &gt; make
@@ -331,6 +583,14 @@ the small ARM processor on board the raspberry pi. I also used a patch that adds
 raspberry pi and run <code>startx</code> to start dwm.</p>
 <pre><code class="language-shell">&gt; cat ~/.Xinitrc
 exec dwm
+</code></pre>
+<p>Add the following to <code>/etc/profile</code> for starting dwm at login:</p>
+<pre><code>if [ -z &quot;${DISPLAY}&quot; ] &amp;&amp; [ &quot;${XDG_VTNR}&quot; -eq 1 ]; then
+  exec startx
+fi
+</code></pre>
+<p>If you want to disable the dwm topbar as I have, modify this in the <code>config.h</code>:</p>
+<pre><code>static const int showbar            = 0;
 </code></pre>
 <h3 id="st"><a class="header" href="#st">st</a></h3>
 <p>Simple Terminal.</p>
@@ -369,6 +629,7 @@ If you want more airports, check out the <code>--aiports</code> option: <a href=
 #!/usr/bin/sh
 st -e ~/.cargo/bin/radar --lat=&quot;39.0&quot; --long=&quot;-84.00&quot; --scale=&quot;0.80&quot; \
 --gpsd --disable-lat-long \
+--display-callsign \
 --touchscreen \
 --locations &quot;(wpafb,39.827793,-84.045894)&quot; &quot;(KMGY,39.591672,-84.227865)&quot; \
 &quot;(DAY,39.898899,-84.2287941)&quot; &quot;(CVG,39.0537296,-84.6500094)&quot; &quot;(CMH,39.9999399,-82.8893654)&quot; \
@@ -376,7 +637,7 @@ st -e ~/.cargo/bin/radar --lat=&quot;39.0&quot; --long=&quot;-84.00&quot; --scal
 &quot;(fhq,39.4503696,-82.2616143)&quot; &quot;(mwo,39.4670316,-84.3879972)&quot; &quot;(rma,39.7298745,-84.8377054)&quot; \
 &quot;(fma,38.2256493,-84.0172027)&quot; &quot;(fwa,41.0588807,-85.2668302)&quot;
 </code></pre>
-<h1 id="discuss"><a class="header" href="#discuss">Discuss</a></h1>
+<h1 id="discuss-3"><a class="header" href="#discuss-3">Discuss</a></h1>
 <ul>
 <li><a href="https://www.rtl-sdr.com/rsadsb-terminal-based-aircraft-radar-on-the-raspberry-pi/">rtl-sdr.com article</a></li>
 <li><a href="https://twitter.com/rtlsdrblog/status/1493415462780104706">rtl-sdr.com twitter</a></li>
@@ -384,171 +645,6 @@ st -e ~/.cargo/bin/radar --lat=&quot;39.0&quot; --long=&quot;-84.00&quot; --scal
 <li><a href="https://news.ycombinator.com/item?id=30317976">hackernews</a></li>
 <li><a href="https://twitter.com/MyriadRF/status/1497257351128231950">myriadRF(limesdr) OTA twitter</a></li>
 <li><a href="https://myriadrf.org/news/ota-ads-b-tracking-at-the-terminal-open-ran-silicon-beginners-guides-and-more/">myriadRF(limsdr) OTA article</a></li>
-</ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="rsadsb-releases"><a class="header" href="#rsadsb-releases">rsadsb Releases</a></h1>
-<p align="center">
-  <img src="https://raw.githubusercontent.com/rsadsb/adsb_deku/master/media/logo.png")
-</p>
-<ul>
-<li><a href="v0.5.1.html">v0.5.1</a></li>
-<li><a href="v0.5.0.html">v0.5.0</a></li>
-<li><a href="v0.4.0.html">v0.4.0</a></li>
-</ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="v051-release-notes---feb-13-2022"><a class="header" href="#v051-release-notes---feb-13-2022">v0.5.1 Release Notes - Feb 13, 2022</a></h1>
-<p align="center">
-  <img src="https://raw.githubusercontent.com/rsadsb/adsb_deku/master/media/logo.png")
-</p>
-<p>Minor bugfix to the <code>radar</code> application.</p>
-<h2 id="links--changelogs"><a class="header" href="#links--changelogs">Links / Changelogs</a></h2>
-<p>All code is released under the <a href="https://github.com/rsadsb">github/rsadsb</a> account.
-Release binaries are available at the following links.</p>
-<h3 id="a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv051adsb_deku-v051a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv051adsb_deku-v051a"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v0.5.1">adsb_deku v0.5.1</a></a></h3>
-<p>See <a href="https://github.com/rsadsb/adsb_deku/blob/v0.5.1/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on <code>adsb_deku</code> library, <code>radar</code>, and <code>1090</code>. </p>
-<p>The library docs.rs documentation for this release is <a href="https://docs.rs/adsb_deku/0.5.1/adsb_deku/">here</a></p>
-<h3 id="a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv051dump1090_rs-v051a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv051dump1090_rs-v051a"><a href="https://github.com/rsadsb/dump1090_rs/releases/tag/v0.5.1">dump1090_rs v0.5.1</a></a></h3>
-<p>See <a href="https://github.com/rsadsb/dump1090_rs/blob/v0.5.1/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on the <code>dump1090_rs</code> application. </p>
-<h2 id="radar"><a class="header" href="#radar">radar</a></h2>
-<ul>
-<li>fix: Swap <code>Airplanes</code> table &quot;Latitude&quot; and &quot;Longitude&quot;, found by reddit user @BanksOfTheOuchita (<a href="https://github.com/rsadsb/adsb_deku/pull/111">!111</a>)</li>
-</ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="v050-release-notes---feb-12-2022"><a class="header" href="#v050-release-notes---feb-12-2022">v0.5.0 Release Notes - Feb 12, 2022</a></h1>
-<p align="center">
-  <img src="https://raw.githubusercontent.com/rsadsb/adsb_deku/master/media/logo.png")
-</p>
-<p><a href="https://github.com/rsadsb">rsadsb</a> is happy to announce v0.5.0 of our library and tools.
-We're proud to have over 100 stars on the main repo, thanks for the support!
-A huge <a href="thanks.html">thanks</a> to all.</p>
-<p>See <a href="quickstart.html">quickstart guide</a> for a installation guide.</p>
-<p>See <a href="rasp-pi-display.html">Raspberry Pi in-car ADS-B Display - with Rust!</a> for my blog post on using my libraries and applications for an in-car ADS-B display.</p>
-<p>If you want to track Elon Musk with Rust, check <a href="https://github.com/rsadsb/elons-jets-rs">this repo</a> out ;)</p>
-<h2 id="links--changelogs-1"><a class="header" href="#links--changelogs-1">Links / Changelogs</a></h2>
-<p>All code is released under the <a href="https://github.com/rsadsb">github/rsadsb</a> account.
-Release binaries are available at the following links.</p>
-<h3 id="a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv050adsb_deku-v050a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv050adsb_deku-v050a"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v0.5.0">adsb_deku v0.5.0</a></a></h3>
-<p>See <a href="https://github.com/rsadsb/adsb_deku/blob/v0.5.0/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on <code>adsb_deku</code> library, <code>radar</code>, and <code>1090</code>. </p>
-<p>The library docs.rs documentation for this release is <a href="https://docs.rs/adsb_deku/0.5.0/adsb_deku/">here</a></p>
-<h3 id="a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv050dump1090_rs-v050a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv050dump1090_rs-v050a"><a href="https://github.com/rsadsb/dump1090_rs/releases/tag/v0.5.0">dump1090_rs v0.5.0</a></a></h3>
-<p>See <a href="https://github.com/rsadsb/dump1090_rs/blob/v0.5.0/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on the <code>dump1090_rs</code> application. </p>
-<h2 id="discuss-1"><a class="header" href="#discuss-1">Discuss</a></h2>
-<ul>
-<li><a href="https://www.reddit.com/r/rust/comments/sr4ara/raspberry_pi_incar_adsb_display_with_rust/">/r/rust</a></li>
-<li><a href="https://twitter.com/wcampbell42/status/1492607956294250505">twitter</a></li>
-</ul>
-<h2 id="news-1"><a class="header" href="#news-1">News</a></h2>
-<ul>
-<li><strong>rtl-sdr.com 2/15/2020:</strong> <a href="https://www.rtl-sdr.com/rsadsb-terminal-based-aircraft-radar-on-the-raspberry-pi">rsadsb: Terminal Based Aircraft Radar on the Raspberry Pi</a>
-<ul>
-<li><a href="https://twitter.com/rtlsdrblog/status/1493415462780104706">twitter</a></li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><strong>myraidRF OTA 2/25/2020:</strong> <a href="https://myriadrf.org/news/ota-ads-b-tracking-at-the-terminal-open-ran-silicon-beginners-guides-and-more/">OTA: ADS-B Tracking at the Terminal, Open RAN Silicon, Beginner’s Guides, and More</a>
-<ul>
-<li><a href="https://twitter.com/MyriadRF/status/1497257351128231950">twitter</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="radar-1"><a class="header" href="#radar-1">radar</a></h2>
-<p><code>x86_64-unknown-linux-gnu</code>
-<img src="media/radar_main_v0.5.0.gif" alt="video" /></p>
-<p><code>armv7-unknown-linux-gnueabihf</code>
-<img src="https://raw.githubusercontent.com/rsadsb/adsb_deku/master/media/peek_2022_02_06_02_640_640.gif" alt="image" /></p>
-<p><code>aarch64-linux-android</code>
-<img src="media/Screenshot_20220212-133517.jpg" alt="image" /></p>
-<h3 id="updates"><a class="header" href="#updates">Updates</a></h3>
-<ul>
-<li>
-<p>Now uses Mercator projection for display the airplanes on the map.</p>
-</li>
-<li>
-<p>Add Mouse and touchscreen controls! This allows moving the map center location, as well as choosing the display mode.
-See the <code>--touchscreen</code> option for displaying zoom controls for platforms such as the raspberry pi.
-<img src="https://user-images.githubusercontent.com/15236002/151737937-96d8fdc9-85e8-4b0c-b1e1-5499162bcad7.png" alt="image" /></p>
-</li>
-<li>
-<p>Airport data can be downloaded from <a href="https://github.com/mborsetti/airportsdata">mborsetti/airportsdata</a>
-and imported using the <code>--airports</code> and <code>--airports-tz-filter</code> option.
-The following shows all airports big and small near my data collection site.
-<img src="https://user-images.githubusercontent.com/15236002/151717559-c1692dc8-4ce7-42c6-bbe7-0bf9a24338ab.png" alt="image" />
-The following is an example of zooming out and seeing all New_York and Chicago time zone airports.
-This looks pretty cool even if it's very not useful :)
-<img src="https://user-images.githubusercontent.com/15236002/151717578-f3ef5024-fd0b-4b1e-9d06-f40cc2f5df25.png" alt="image" />
-And Coverage!
-<img src="media/2022-02-01-224808_987x815_scrot.png" alt="image" /></p>
-</li>
-<li>
-<p><code>--cities</code> are now named <code>--locations</code></p>
-</li>
-<li>
-<p>Range and Distance checks are now added, fixing some long standing bugs with mis-decoding lat/lon positions.
-(<a href="https://github.com/rsadsb/adsb_deku/pull/101">!101</a>)</p>
-</li>
-<li>
-<p>Added <code>Help</code> tab with a table of key bindings: (<a href="https://github.com/rsadsb/adsb_deku/pull/107">!107</a>)</p>
-</li>
-<li>
-<p>Thanks <a href="https://github.com/Jachdich">@Jachdich</a> for fixing a bug in <code>radar</code> with time: (<a href="https://github.com/rsadsb/adsb_deku/pull/57">!57</a>)</p>
-</li>
-</ul>
-<h2 id="adsb_deku-library"><a class="header" href="#adsb_deku-library">adsb_deku (library)</a></h2>
-<ul>
-<li>Thanks <a href="https://github.com/amacd31">@amacd31</a> for fixing a bug in CPR calculations.
-(<a href="https://github.com/rsadsb/adsb_deku/pull/78">!78</a>).</li>
-<li>Thanks <a href="https://github.com/mikemorris">@mikemorris</a> for fixing a link in my README.md.
-(<a href="https://github.com/rsadsb/adsb_deku/pull/61">!61</a>).</li>
-</ul>
-<h2 id="dump1090"><a class="header" href="#dump1090">dump1090</a></h2>
-<ul>
-<li>Now uses the <a href="https://github.com/pothosware/SoapySDR">soapysdr</a> library for multi-sdr platforms
-support through the <a href="https://github.com/kevinmehall/rust-soapysdr">soapysdr-rs</a> crate.
-Currently tested are the rtl-sdr and the hackrf support.
-If you test this on new SDR platforms, merge requests welcome for default gain settings!</li>
-</ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="v040-release-notes---dec-10-2021"><a class="header" href="#v040-release-notes---dec-10-2021">v0.4.0 Release Notes - Dec 10, 2021</a></h1>
-<p align="center">
-  <img src="https://raw.githubusercontent.com/rsadsb/adsb_deku/master/media/logo.png")
-</p>
-<p><a href="https://github.com/rsadsb">rsadsb</a> is happy to announce v0.4.0 of our library and tools.
-This update focused on improving the accuracy of the library, as well as touching up the radar tui and
-improving performance.</p>
-<h3 id="a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv040adsb_deku-v040a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv040adsb_deku-v040a"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v0.4.0">adsb_deku v0.4.0</a></a></h3>
-<p>See <a href="https://github.com/rsadsb/adsb_deku/blob/v0.4.0/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on adsb_deku library, radar, and 1090. </p>
-<h3 id="a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv040dump1090_rs-v040a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv040dump1090_rs-v040a"><a href="https://github.com/rsadsb/dump1090_rs/releases/tag/v0.4.0">dump1090_rs v0.4.0</a></a></h3>
-<p>See <a href="https://github.com/rsadsb/dump1090_rs/blob/v0.4.0/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on the dump1090 application. </p>
-<h3 id="discuss-2"><a class="header" href="#discuss-2">Discuss</a></h3>
-<ul>
-<li><a href="https://www.reddit.com/r/rust/comments/rcig0o/media_view_airplanes_in_the_sky_with_rust/?utm_source=share&amp;utm_medium=web2x&amp;context=3">/r/rust post</a></li>
-<li><a href="https://www.reddit.com/r/RTLSDR/comments/rciosj/media_view_airplanes_in_the_sky_with_rust/?utm_source=share&amp;utm_medium=web2x&amp;context=3">/r/rtlsdr post</a></li>
-<li><a href="https://www.reddit.com/r/ADSB/comments/rciogi/media_view_airplanes_in_the_sky_with_rust/?utm_source=share&amp;utm_medium=web2x&amp;context=3">/r/adsb post</a></li>
-</ul>
-<h3 id="news-2"><a class="header" href="#news-2">News</a></h3>
-<ul>
-<li><a href="https://this-week-in-rust.org/blog/2021/12/15/this-week-in-rust-421/">This Week in Rust 421</a></li>
-</ul>
-<hr />
-<h2 id="radar-2"><a class="header" href="#radar-2">radar</a></h2>
-<p><img src="https://raw.githubusercontent.com/rsadsb/adsb_deku/master/media/2021_12_08.gif" alt="image" /></p>
-<h3 id="updates-1"><a class="header" href="#updates-1">Updates</a></h3>
-<p>Thank you to <a href="https://github.com/wiseman">@wiseman</a> for helping me develop features.</p>
-<ul>
-<li>The Tab key can now be used to change the view to the pane. </li>
-<li>Airplane display was added for a detailed display of all call signs, vertical speed, lat, long, and number of messages.</li>
-<li>Possible mis-decodes were reduced by reducing the trust of messages with a time gap.</li>
-<li>Dynamic Lat/Long positions are now possible if you have a gpsd server.</li>
-<li>Logging was added to <code>./logs</code> and can be controlled with the <code>RUST_LOG</code> env variable.</li>
-<li>A grayscale heatmap was added to the Coverage screen, giving the operator more detail on his sky coverage.</li>
-</ul>
-<h2 id="adsb_deku-library-1"><a class="header" href="#adsb_deku-library-1">adsb_deku (library)</a></h2>
-<p>The library itself was pretty stable for this release, just fixing some minor bugs with parsing and improving
-the documentation.</p>
-<p>The documentation for this release is <a href="https://docs.rs/adsb_deku/0.4.0/adsb_deku/">here</a></p>
-<h2 id="dump1090-1"><a class="header" href="#dump1090-1">dump1090</a></h2>
-<ul>
-<li>The library is now styled in such a way that be tested from iq data, this will help prove the applications state
-in the future.</li>
-<li><code>--host</code> and <code>--port</code> were added to control TCP.</li>
-<li>A good amount of time was given to make sure the application was release ready, this gave us around 9% faster demodulation and decode.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="thanks"><a class="header" href="#thanks">Thanks</a></h1>
 <p>I can try and <em>not</em> make this a <code>cargo tree</code>,
