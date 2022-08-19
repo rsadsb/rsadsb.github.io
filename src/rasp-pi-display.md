@@ -191,6 +191,7 @@ If you want more airports, check out the `--aiports` option: [image](https://use
 #!/usr/bin/sh
 st -e ~/.cargo/bin/radar --lat="39.0" --long="-84.00" --scale="0.80" \
 --gpsd --disable-lat-long \
+--display-callsign \
 --touchscreen \
 --locations "(wpafb,39.827793,-84.045894)" "(KMGY,39.591672,-84.227865)" \
 "(DAY,39.898899,-84.2287941)" "(CVG,39.0537296,-84.6500094)" "(CMH,39.9999399,-82.8893654)" \

@@ -32,7 +32,7 @@ as well as forwarding the bytes to our application.
 ### [radar](https://github.com/rsadsb/adsb_deku)
 `radar` parses the ADS-B messages into data that can be displayed on a map.
 
-![image](https://raw.githubusercontent.com/rsadsb/adsb_deku/master/media/peek_2022_02_06_02_640_640.gif)
+![image](https://github.com/rsadsb/adsb_deku/raw/master/media/peek_2022_08_19.gif)
 
 ## Linux dependencies
 You will need to install the `soapysdr` library, plus the `soapysdr` driver for your SDR(rtlsdr).
@@ -44,17 +44,17 @@ Binaries can be downloaded from the latest releases of our software on github.
 The following is an example for `x86_64`.
 ```
 # download dump1090_rs
-> wget https://github.com/rsadsb/dump1090_rs/releases/download/v0.5.1/dump1090_rs-x86_64-unknown-linux-gnu.tar.gz
+> wget https://github.com/rsadsb/dump1090_rs/releases/download/v0.6.0/dump1090_rs-x86_64-unknown-linux-gnu.tar.gz
 > tar -xf dump1090_rs-x86_64-unknown-linux-gnu.tar.gz
 
 # download radar
-> wget https://github.com/rsadsb/adsb_deku/releases/download/v0.5.1/radar-x86_64-unknown-linux-gnu.tar.gz
+> wget https://github.com/rsadsb/adsb_deku/releases/download/v0.6.0/radar-x86_64-unknown-linux-gnu.tar.gz
 > tar -xf radar-x86_64-unknown-linux-gnu.tar.gz
 ```
 
 `ARM` releases are also available:
-- [dump1090_rs](https://github.com/rsadsb/dump1090_rs/releases/tag/v0.5.1)
-- [radar](https://github.com/rsadsb/adsb_deku/releases/tag/v0.5.1)
+- [dump1090_rs](https://github.com/rsadsb/dump1090_rs/releases/tag/v0.6.0)
+- [radar](https://github.com/rsadsb/adsb_deku/releases/tag/v0.6.0)
 
 
 ## (Optional) Install from source for max performance
