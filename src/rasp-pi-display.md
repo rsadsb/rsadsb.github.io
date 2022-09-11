@@ -190,8 +190,8 @@ If you want more airports, check out the `--aiports` option: [image](https://use
 > cat ~/.dwm/autostart.sh
 #!/usr/bin/sh
 st -e ~/.cargo/bin/radar --lat="39.0" --long="-84.00" --scale="0.80" \
---gpsd --disable-lat-long \
---display-callsign \
+--gpsd \
+--disable-lat-long \
 --touchscreen \
 --locations "(wpafb,39.827793,-84.045894)" "(KMGY,39.591672,-84.227865)" \
 "(DAY,39.898899,-84.2287941)" "(CVG,39.0537296,-84.6500094)" "(CMH,39.9999399,-82.8893654)" \
@@ -207,4 +207,4 @@ st -e ~/.cargo/bin/radar --lat="39.0" --long="-84.00" --scale="0.80" \
 * [reddit/rust](https://www.reddit.com/r/rust/comments/sr4ara/raspberry_pi_incar_adsb_display_with_rust/)
 * [hackernews](https://news.ycombinator.com/item?id=30317976)
 * [myriadRF(limesdr) OTA twitter](https://twitter.com/MyriadRF/status/1497257351128231950)
-* [myriadRF(limsdr) OTA article](https://myriadrf.org/news/ota-ads-b-tracking-at-the-terminal-open-ran-silicon-beginners-guides-and-more/)
+* [myriadRF(limesdr) OTA article](https://myriadrf.org/news/ota-ads-b-tracking-at-the-terminal-open-ran-silicon-beginners-guides-and-more/)
