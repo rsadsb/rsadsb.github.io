@@ -291,8 +291,8 @@ If you want more airports, check out the <code>--aiports</code> option: <a href=
 <pre><code>&gt; cat ~/.dwm/autostart.sh
 #!/usr/bin/sh
 st -e ~/.cargo/bin/radar --lat=&quot;39.0&quot; --long=&quot;-84.00&quot; --scale=&quot;0.80&quot; \
---gpsd --disable-lat-long \
---display-callsign \
+--gpsd \
+--disable-lat-long \
 --touchscreen \
 --locations &quot;(wpafb,39.827793,-84.045894)&quot; &quot;(KMGY,39.591672,-84.227865)&quot; \
 &quot;(DAY,39.898899,-84.2287941)&quot; &quot;(CVG,39.0537296,-84.6500094)&quot; &quot;(CMH,39.9999399,-82.8893654)&quot; \
@@ -307,7 +307,7 @@ st -e ~/.cargo/bin/radar --lat=&quot;39.0&quot; --long=&quot;-84.00&quot; --scal
 <li><a href="https://www.reddit.com/r/rust/comments/sr4ara/raspberry_pi_incar_adsb_display_with_rust/">reddit/rust</a></li>
 <li><a href="https://news.ycombinator.com/item?id=30317976">hackernews</a></li>
 <li><a href="https://twitter.com/MyriadRF/status/1497257351128231950">myriadRF(limesdr) OTA twitter</a></li>
-<li><a href="https://myriadrf.org/news/ota-ads-b-tracking-at-the-terminal-open-ran-silicon-beginners-guides-and-more/">myriadRF(limsdr) OTA article</a></li>
+<li><a href="https://myriadrf.org/news/ota-ads-b-tracking-at-the-terminal-open-ran-silicon-beginners-guides-and-more/">myriadRF(limesdr) OTA article</a></li>
 </ul>
 
                     </main>
