@@ -48,13 +48,13 @@ The following is an example for `x86_64`.
 > tar -xf dump1090_rs-x86_64-unknown-linux-gnu.tar.gz
 
 # download radar
-> wget https://github.com/rsadsb/adsb_deku/releases/download/v0.6.0/radar-x86_64-unknown-linux-gnu.tar.gz
+> wget https://github.com/rsadsb/adsb_deku/releases/download/v0.6.1/radar-x86_64-unknown-linux-gnu.tar.gz
 > tar -xf radar-x86_64-unknown-linux-gnu.tar.gz
 ```
 
 `ARM` releases are also available:
 - [dump1090_rs](https://github.com/rsadsb/dump1090_rs/releases/tag/v0.6.0)
-- [radar](https://github.com/rsadsb/adsb_deku/releases/tag/v0.6.0)
+- [radar](https://github.com/rsadsb/adsb_deku/releases/tag/v0.6.1)
 
 
 ## (Optional) Install from source for max performance

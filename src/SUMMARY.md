@@ -6,6 +6,7 @@
 
 [Quick Start](./quickstart.md)
 - [rsadsb Release Notes](./rsadsb_releases.md)
+    - [v0.6.1](./v0.6.1.md)
     - [v0.6.0](./v0.6.0.md)
     - [v0.5.1](./v0.5.1.md)
     - [v0.5.0](./v0.5.0.md)
