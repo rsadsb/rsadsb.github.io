@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="home.html">Home</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="quickstart.html">Quick Start</a></li><li class="chapter-item expanded "><a href="rsadsb_releases.html"><strong aria-hidden="true">1.</strong> rsadsb Release Notes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="v0.6.1.html"><strong aria-hidden="true">1.1.</strong> v0.6.1</a></li><li class="chapter-item expanded "><a href="v0.6.0.html"><strong aria-hidden="true">1.2.</strong> v0.6.0</a></li><li class="chapter-item expanded "><a href="v0.5.1.html"><strong aria-hidden="true">1.3.</strong> v0.5.1</a></li><li class="chapter-item expanded "><a href="v0.5.0.html"><strong aria-hidden="true">1.4.</strong> v0.5.0</a></li><li class="chapter-item expanded "><a href="v0.4.0.html"><strong aria-hidden="true">1.5.</strong> v0.4.0</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Blog</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="rasp-pi-display.html">Raspberry Pi in-car ADS-B Display - with Rust!</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="thanks.html">Thanks</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="home.html">Home</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="quickstart.html">Quick Start</a></li><li class="chapter-item expanded "><a href="rsadsb_releases.html"><strong aria-hidden="true">1.</strong> rsadsb Release Notes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="2022.12.29.html"><strong aria-hidden="true">1.1.</strong> 2022.12.29</a></li><li class="chapter-item expanded "><a href="v0.6.1.html"><strong aria-hidden="true">1.2.</strong> v0.6.1</a></li><li class="chapter-item expanded "><a href="v0.6.0.html"><strong aria-hidden="true">1.3.</strong> v0.6.0</a></li><li class="chapter-item expanded "><a href="v0.5.1.html"><strong aria-hidden="true">1.4.</strong> v0.5.1</a></li><li class="chapter-item expanded "><a href="v0.5.0.html"><strong aria-hidden="true">1.5.</strong> v0.5.0</a></li><li class="chapter-item expanded "><a href="v0.4.0.html"><strong aria-hidden="true">1.6.</strong> v0.4.0</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Blog</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="rasp-pi-display.html">Raspberry Pi in-car ADS-B Display - with Rust!</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="thanks.html">Thanks</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -164,9 +164,9 @@ A Rust software suite for ADS-B demodulation, decoding, and processing.</p>
 <p>See <a href="quickstart.html">quickstart</a> for the easy installation process.</p>
 <h2 id="latest-release"><a class="header" href="#latest-release">Latest Release</a></h2>
 <h3 id="major"><a class="header" href="#major">Major</a></h3>
-<p><a href="v0.6.0.html">v0.6.0</a></p>
+<p><a href="2022.12.29.html">2022-12-29</a></p>
 <h3 id="minor"><a class="header" href="#minor">Minor</a></h3>
-<p><a href="v0.6.1.html">v0.6.1</a></p>
+<p>N/A</p>
 <h2 id="news"><a class="header" href="#news">News</a></h2>
 <ul>
 <li><strong>rtl-sdr.com 2/15/2020:</strong>
@@ -179,7 +179,7 @@ A Rust software suite for ADS-B demodulation, decoding, and processing.</p>
 <h2 id="contributing"><a class="header" href="#contributing">Contributing</a></h2>
 <p>All source code for the project is stored on <a href="https://github.com/rsadsb">github</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ads-b-quick-start-installation-guide"><a class="header" href="#ads-b-quick-start-installation-guide">ADS-B Quick Start Installation Guide</a></h1>
-<p><em>last edited: 03/25/22</em></p>
+<p><em>last edited: 2022/12/29</em></p>
 <p>This guide will give you a quick and easy to setup system to demodulate and decode ADS-B messages using this Rust software!
 For a good technical intro into what ADS-B is and how it is decoded, see the following <a href="https://mode-s.org/decode/">guide</a>.</p>
 <h1 id="hardware"><a class="header" href="#hardware">Hardware</a></h1>
@@ -209,17 +209,17 @@ The <code>soapysdr</code> library can be foud as <code>libsoapysdr-dev</code> on
 <p>Binaries can be downloaded from the latest releases of our software on github.
 The following is an example for <code>x86_64</code>.</p>
 <pre><code># download dump1090_rs
-&gt; wget https://github.com/rsadsb/dump1090_rs/releases/download/v0.6.0/dump1090_rs-x86_64-unknown-linux-gnu.tar.gz
+&gt; wget https://github.com/rsadsb/dump1090_rs/releases/download/v0.6.1/dump1090_rs-x86_64-unknown-linux-gnu.tar.gz
 &gt; tar -xf dump1090_rs-x86_64-unknown-linux-gnu.tar.gz
 
 # download radar
-&gt; wget https://github.com/rsadsb/adsb_deku/releases/download/v0.6.1/radar-x86_64-unknown-linux-gnu.tar.gz
+&gt; wget https://github.com/rsadsb/adsb_deku/releases/download/v2022.12.29/radar-x86_64-unknown-linux-gnu.tar.gz
 &gt; tar -xf radar-x86_64-unknown-linux-gnu.tar.gz
 </code></pre>
 <p><code>ARM</code> releases are also available:</p>
 <ul>
-<li><a href="https://github.com/rsadsb/dump1090_rs/releases/tag/v0.6.0">dump1090_rs</a></li>
-<li><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v0.6.1">radar</a></li>
+<li><a href="https://github.com/rsadsb/dump1090_rs/releases/tag/v0.6.1">dump1090_rs</a></li>
+<li><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v2022.12.29">radar</a></li>
 </ul>
 <h2 id="optional-install-from-source-for-max-performance"><a class="header" href="#optional-install-from-source-for-max-performance">(Optional) Install from source for max performance</a></h2>
 <details>
@@ -230,7 +230,7 @@ cpu features such as AVX(Advanced Vector Extensions) on x86 architectures.
 These are currently only detected at compile time and is the reason for <code>RUSTFLAGS=&quot;-C target-cpu=native&quot;</code> in the following install commands.</p>
 <h4 id="install-compiler"><a class="header" href="#install-compiler">Install Compiler</a></h4>
 <p>Goto <a href="https://rustup.rs">rustup.rs</a> and follow instructions for installing <code>rust</code> and <code>cargo</code>.
-The current msrv(minimum supported rust version) is <code>1.59.0</code>.</p>
+The current msrv(minimum supported rust version) is <code>1.64.0</code>.</p>
 <h3 id="install-soapysdr-library"><a class="header" href="#install-soapysdr-library">Install soapysdr library</a></h3>
 <p>You will need the soapysdr library. For example, this is <code>libsoapysdr-dev</code> on ubuntu based platforms.</p>
 <h3 id="clang"><a class="header" href="#clang">Clang</a></h3>
@@ -263,18 +263,49 @@ See <a href="rasp-pi-display.html">Raspberry Pi in-car ADS-B Display - with Rust
   <img src="https://raw.githubusercontent.com/rsadsb/adsb_deku/master/media/logo.png")
 </p>
 <ul>
+<li><a href="2022.12.29.html">2022-12-29</a></li>
+<li><a href="v0.6.1.html">v0.6.1</a></li>
 <li><a href="v0.6.1.html">v0.6.1</a></li>
 <li><a href="v0.6.0.html">v0.6.0</a></li>
 <li><a href="v0.5.1.html">v0.5.1</a></li>
 <li><a href="v0.5.0.html">v0.5.0</a></li>
 <li><a href="v0.4.0.html">v0.4.0</a></li>
 </ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="2022-12-29-release-notes"><a class="header" href="#2022-12-29-release-notes">2022-12-29 Release Notes</a></h1>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/rsadsb/adsb_deku/master/media/logo.png")
+</p>
+<p>This update fixes issues with building the project, as we have updated to the latest versions of all
+used libraries. Happy Holidays!</p>
+<p>As always, check out <a href="quickstart.html">quickstart guide</a> for a installation guide.</p>
+<h2 id="links--changelogs"><a class="header" href="#links--changelogs">Links / Changelogs</a></h2>
+<p>All code is released under the <a href="https://github.com/rsadsb">github/rsadsb</a> account.
+Release binaries are available at the following links.</p>
+<h3 id="a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv20221229adsb_deku-v20221229a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv20221229adsb_deku-v20221229a"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v2022.12.29">adsb_deku v2022.12.29</a></a></h3>
+<p>See <a href="https://github.com/rsadsb/adsb_deku/blob/v2022.12.29/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on <code>adsb_deku</code> libraries, <code>radar</code>, and <code>1090</code>. </p>
+<h4 id="adsb_deku---062"><a class="header" href="#adsb_deku---062">adsb_deku - <code>0.6.2</code></a></h4>
+<ul>
+<li>Updated deku to v0.15.1 to build with newer version of bitvec</li>
+</ul>
+<h4 id="radar---062"><a class="header" href="#radar---062">radar - <code>0.6.2</code></a></h4>
+<ul>
+<li>Updated clap to v4, improving the command line parsing and help text</li>
+</ul>
+<h4 id="1090---062"><a class="header" href="#1090---062">1090 - <code>0.6.2</code></a></h4>
+<ul>
+<li>Updated clap to v4, improving the command line parsing and help text</li>
+</ul>
+<h3 id="a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv061dump1090-v061a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv061dump1090-v061a"><a href="https://github.com/rsadsb/dump1090_rs/releases/tag/v0.6.1">dump1090 v0.6.1</a></a></h3>
+<p>See <a href="https://github.com/rsadsb/dump1090_rs/blob/v0.6.1/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on <code>dump1090_rs</code>.</p>
+<ul>
+<li>Updated clap to v4, improving the command line parsing and help text</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="v061-release-notes---sept-11-2022"><a class="header" href="#v061-release-notes---sept-11-2022">v0.6.1 Release Notes - Sept 11, 2022</a></h1>
 <p align="center">
   <img src="https://raw.githubusercontent.com/rsadsb/adsb_deku/master/media/logo.png")
 </p>
 <p>Minor bugfix to the <code>radar</code> application.</p>
-<h2 id="links--changelogs"><a class="header" href="#links--changelogs">Links / Changelogs</a></h2>
+<h2 id="links--changelogs-1"><a class="header" href="#links--changelogs-1">Links / Changelogs</a></h2>
 <p>All code is released under the <a href="https://github.com/rsadsb">github/rsadsb</a> account.
 Release binaries are available at the following links.</p>
 <h3 id="a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv061adsb_deku-v061a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv061adsb_deku-v061a"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v0.6.1">adsb_deku v0.6.1</a></a></h3>
@@ -294,7 +325,7 @@ Release binaries are available at the following links.</p>
 We're proud to have over 200 stars on the main repo, thanks for the support!
 A huge <a href="thanks.html">thanks</a> to all.</p>
 <p>See <a href="quickstart.html">quickstart guide</a> for a installation guide.</p>
-<h2 id="links--changelogs-1"><a class="header" href="#links--changelogs-1">Links / Changelogs</a></h2>
+<h2 id="links--changelogs-2"><a class="header" href="#links--changelogs-2">Links / Changelogs</a></h2>
 <p>All code is released under the <a href="https://github.com/rsadsb">github/rsadsb</a> account.
 Release binaries are available at the following links.</p>
 <h3 id="a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv060adsb_deku-v060a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv060adsb_deku-v060a"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v0.6.0">adsb_deku v0.6.0</a></a></h3>
@@ -346,7 +377,7 @@ You can find that code <a href="https://github.com/wcampbell0x2a/rsadsb-embedded
   <img src="https://raw.githubusercontent.com/rsadsb/adsb_deku/master/media/logo.png")
 </p>
 <p>Minor bugfix to the <code>radar</code> application.</p>
-<h2 id="links--changelogs-2"><a class="header" href="#links--changelogs-2">Links / Changelogs</a></h2>
+<h2 id="links--changelogs-3"><a class="header" href="#links--changelogs-3">Links / Changelogs</a></h2>
 <p>All code is released under the <a href="https://github.com/rsadsb">github/rsadsb</a> account.
 Release binaries are available at the following links.</p>
 <h3 id="a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv051adsb_deku-v051a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv051adsb_deku-v051a"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v0.5.1">adsb_deku v0.5.1</a></a></h3>
@@ -368,7 +399,7 @@ A huge <a href="thanks.html">thanks</a> to all.</p>
 <p>See <a href="quickstart.html">quickstart guide</a> for a installation guide.</p>
 <p>See <a href="rasp-pi-display.html">Raspberry Pi in-car ADS-B Display - with Rust!</a> for my blog post on using my libraries and applications for an in-car ADS-B display.</p>
 <p>If you want to track Elon Musk with Rust, check <a href="https://github.com/rsadsb/elons-jets-rs">this repo</a> out ;)</p>
-<h2 id="links--changelogs-3"><a class="header" href="#links--changelogs-3">Links / Changelogs</a></h2>
+<h2 id="links--changelogs-4"><a class="header" href="#links--changelogs-4">Links / Changelogs</a></h2>
 <p>All code is released under the <a href="https://github.com/rsadsb">github/rsadsb</a> account.
 Release binaries are available at the following links.</p>
 <h3 id="a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv050adsb_deku-v050a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv050adsb_deku-v050a"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v0.5.0">adsb_deku v0.5.0</a></a></h3>
