@@ -20,10 +20,10 @@ See [quickstart](quickstart.md) for the easy installation process.
 ## Latest Release
 
 ### Major
-[v0.6.0](v0.6.0.md)
+[2022-12-29](2022.12.29.md)
 
 ### Minor
-[v0.6.1](v0.6.1.md)
+N/A
 
 ## News
 * **rtl-sdr.com 2/15/2020:**
