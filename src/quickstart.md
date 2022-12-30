@@ -1,5 +1,5 @@
 # ADS-B Quick Start Installation Guide
-_last edited: 03/25/22_
+_last edited: 2022/12/29_
 
 This guide will give you a quick and easy to setup system to demodulate and decode ADS-B messages using this Rust software!
 For a good technical intro into what ADS-B is and how it is decoded, see the following [guide](https://mode-s.org/decode/).
@@ -44,17 +44,17 @@ Binaries can be downloaded from the latest releases of our software on github.
 The following is an example for `x86_64`.
 ```
 # download dump1090_rs
-> wget https://github.com/rsadsb/dump1090_rs/releases/download/v0.6.0/dump1090_rs-x86_64-unknown-linux-gnu.tar.gz
+> wget https://github.com/rsadsb/dump1090_rs/releases/download/v0.6.1/dump1090_rs-x86_64-unknown-linux-gnu.tar.gz
 > tar -xf dump1090_rs-x86_64-unknown-linux-gnu.tar.gz
 
 # download radar
-> wget https://github.com/rsadsb/adsb_deku/releases/download/v0.6.1/radar-x86_64-unknown-linux-gnu.tar.gz
+> wget https://github.com/rsadsb/adsb_deku/releases/download/v2022.12.29/radar-x86_64-unknown-linux-gnu.tar.gz
 > tar -xf radar-x86_64-unknown-linux-gnu.tar.gz
 ```
 
 `ARM` releases are also available:
-- [dump1090_rs](https://github.com/rsadsb/dump1090_rs/releases/tag/v0.6.0)
-- [radar](https://github.com/rsadsb/adsb_deku/releases/tag/v0.6.1)
+- [dump1090_rs](https://github.com/rsadsb/dump1090_rs/releases/tag/v0.6.1)
+- [radar](https://github.com/rsadsb/adsb_deku/releases/tag/v2022.12.29)
 
 
 ## (Optional) Install from source for max performance
@@ -69,7 +69,7 @@ These are currently only detected at compile time and is the reason for `RUSTFLA
 
 #### Install Compiler
 Goto [rustup.rs](https://rustup.rs) and follow instructions for installing `rust` and `cargo`.
-The current msrv(minimum supported rust version) is `1.59.0`.
+The current msrv(minimum supported rust version) is `1.64.0`.
 
 ### Install soapysdr library
 You will need the soapysdr library. For example, this is `libsoapysdr-dev` on ubuntu based platforms.
