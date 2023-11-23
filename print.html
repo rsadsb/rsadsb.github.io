@@ -1,47 +1,46 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js navy">
+<html lang="en" class="navy" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>rsadsb</title>
-                <meta name="robots" content="noindex" />
-                
+        <meta name="robots" content="noindex">
+
 
         <!-- Custom HTML head -->
         
-
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff">
 
-                        <link rel="shortcut icon" href="favicon.png">
-                <link rel="stylesheet" href="css/variables.css">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
-                <link rel="stylesheet" href="css/print.css" media="print">
-        
+        <link rel="stylesheet" href="css/print.css" media="print">
+
         <!-- Fonts -->
         <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-                <link rel="stylesheet" href="fonts/fonts.css">
-        
+        <link rel="stylesheet" href="fonts/fonts.css">
+
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="highlight.css">
         <link rel="stylesheet" href="tomorrow-night.css">
         <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
-        
-            </head>
-    <body>
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
         <!-- Provide site root to javascript -->
-        <script type="text/javascript">
+        <script>
             var path_to_root = "";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "navy";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script type="text/javascript">
+        <script>
             try {
                 var theme = localStorage.getItem('mdbook-theme');
                 var sidebar = localStorage.getItem('mdbook-sidebar');
@@ -57,45 +56,74 @@
         </script>
 
         <!-- Set the theme before any content is loaded, prevents flash -->
-        <script type="text/javascript">
+        <script>
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
-            html.classList.remove('no-js')
             html.classList.remove('navy')
             html.classList.add(theme);
-            html.classList.add('js');
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
         </script>
 
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
         <!-- Hide / unhide sidebar before it is displayed -->
-        <script type="text/javascript">
-            var html = document.querySelector('html');
-            var sidebar = 'hidden';
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
-            html.classList.remove('sidebar-visible');
-            html.classList.add("sidebar-" + sidebar);
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="home.html">Home</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="quickstart.html">Quick Start</a></li><li class="chapter-item expanded "><a href="rsadsb_releases.html"><strong aria-hidden="true">1.</strong> rsadsb Release Notes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="2023.11.22.html"><strong aria-hidden="true">1.1.</strong> 2023.11.22</a></li><li class="chapter-item expanded "><a href="2022.12.29.html"><strong aria-hidden="true">1.2.</strong> 2022.12.29</a></li><li class="chapter-item expanded "><a href="v0.6.1.html"><strong aria-hidden="true">1.3.</strong> v0.6.1</a></li><li class="chapter-item expanded "><a href="v0.6.0.html"><strong aria-hidden="true">1.4.</strong> v0.6.0</a></li><li class="chapter-item expanded "><a href="v0.5.1.html"><strong aria-hidden="true">1.5.</strong> v0.5.1</a></li><li class="chapter-item expanded "><a href="v0.5.0.html"><strong aria-hidden="true">1.6.</strong> v0.5.0</a></li><li class="chapter-item expanded "><a href="v0.4.0.html"><strong aria-hidden="true">1.7.</strong> v0.4.0</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Blog</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="rasp-pi-display.html">Raspberry Pi in-car ADS-B Display - with Rust!</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="thanks.html">Thanks</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="home.html">Home</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="quickstart.html">Quick Start</a></li><li class="chapter-item expanded "><a href="rsadsb_releases.html"><strong aria-hidden="true">1.</strong> rsadsb Release Notes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="2023.11.22.html"><strong aria-hidden="true">1.1.</strong> 2023.11.22</a></li><li class="chapter-item expanded "><a href="2022.12.29.html"><strong aria-hidden="true">1.2.</strong> 2022.12.29</a></li><li class="chapter-item expanded "><a href="v0.6.1.html"><strong aria-hidden="true">1.3.</strong> v0.6.1</a></li><li class="chapter-item expanded "><a href="v0.6.0.html"><strong aria-hidden="true">1.4.</strong> v0.6.0</a></li><li class="chapter-item expanded "><a href="v0.5.1.html"><strong aria-hidden="true">1.5.</strong> v0.5.1</a></li><li class="chapter-item expanded "><a href="v0.5.0.html"><strong aria-hidden="true">1.6.</strong> v0.5.0</a></li><li class="chapter-item expanded "><a href="v0.4.0.html"><strong aria-hidden="true">1.7.</strong> v0.4.0</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Blog</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="rasp-pi-display.html">Raspberry Pi in-car ADS-B Display - with Rust!</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="thanks.html">Thanks</a></li></ol>
+            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
 
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                
-                <div id="menu-bar-hover-placeholder"></div>
-                <div id="menu-bar" class="menu-bar sticky bordered">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
-                        </button>
+                        </label>
                         <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
                             <i class="fa fa-paint-brush"></i>
                         </button>
@@ -103,28 +131,28 @@
                             <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
                         </ul>
-                                                <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
                             <i class="fa fa-search"></i>
                         </button>
-                                            </div>
+                    </div>
 
                     <h1 class="menu-title">rsadsb</h1>
 
                     <div class="right-buttons">
-                                                <a href="print.html" title="Print this book" aria-label="Print this book">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
-                                                                        <a href="https://github.com/rsadsb/rsadsb.github.io" title="Git repository" aria-label="Git repository">
+                        <a href="https://github.com/rsadsb/rsadsb.github.io" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
-                                                
+
                     </div>
                 </div>
 
-                                <div id="search-wrapper" class="hidden">
+                <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
                         <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
                     </form>
@@ -134,9 +162,9 @@
                         </ul>
                     </div>
                 </div>
-                
+
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script type="text/javascript">
+                <script>
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
                     document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
                     Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
@@ -195,10 +223,10 @@ from the sky and you should be fine. If you want a super cheap solution, I have 
 <p>You will need a N-Type Male SMA to SMA Male connection cable. You can also find these on <a href="https://store.adsbexchange.com/collections/all">store.adsbexchange.com</a>. This will allow you to connect the antenna directly to the <code>rltsdr</code>.
 The <code>rtlsdr</code> should be plugged into your computer's USB port.</p>
 <h1 id="software"><a class="header" href="#software">Software</a></h1>
-<h3 id="a-hrefhttpsgithubcomrsadsbdump1090_rsdump1090_rsa"><a class="header" href="#a-hrefhttpsgithubcomrsadsbdump1090_rsdump1090_rsa"><a href="https://github.com/rsadsb/dump1090_rs">dump1090_rs</a></a></h3>
+<h3 id="dump1090_rs"><a class="header" href="#dump1090_rs"><a href="https://github.com/rsadsb/dump1090_rs">dump1090_rs</a></a></h3>
 <p><code>dump1090_rs</code> performs the demodulating of the 1090Mhz signal from an SDR (Software Defined Radio),
 as well as forwarding the bytes to our application.</p>
-<h3 id="a-hrefhttpsgithubcomrsadsbadsb_dekuradara"><a class="header" href="#a-hrefhttpsgithubcomrsadsbadsb_dekuradara"><a href="https://github.com/rsadsb/adsb_deku">radar</a></a></h3>
+<h3 id="radar"><a class="header" href="#radar"><a href="https://github.com/rsadsb/adsb_deku">radar</a></a></h3>
 <p><code>radar</code> parses the ADS-B messages into data that can be displayed on a map.</p>
 <p><img src="https://github.com/rsadsb/adsb_deku/raw/master/media/peek_2022_08_19.gif" alt="image" /></p>
 <h2 id="linux-dependencies"><a class="header" href="#linux-dependencies">Linux dependencies</a></h2>
@@ -235,10 +263,10 @@ The current msrv(minimum supported rust version) is <code>1.64.0</code>.</p>
 <p>You will need the soapysdr library. For example, this is <code>libsoapysdr-dev</code> on ubuntu based platforms.</p>
 <h3 id="clang"><a class="header" href="#clang">Clang</a></h3>
 <p>Install <code>libclang</code>, found as <code>libclang-dev</code> on ubuntu.</p>
-<h3 id="a-hrefhttpsgithubcomrsadsbdump1090_rsdump1090_rsa-from-master-branch"><a class="header" href="#a-hrefhttpsgithubcomrsadsbdump1090_rsdump1090_rsa-from-master-branch"><a href="https://github.com/rsadsb/dump1090_rs">dump1090_rs</a> from master branch</a></h3>
+<h3 id="dump1090_rs-from-master-branch"><a class="header" href="#dump1090_rs-from-master-branch"><a href="https://github.com/rsadsb/dump1090_rs">dump1090_rs</a> from master branch</a></h3>
 <pre><code class="language-shell">RUSTFLAGS=&quot;-C target-cpu=native&quot; cargo install --git https://github.com/rsadsb/dump1090_rs
 </code></pre>
-<h3 id="a-hrefhttpsgithubcomrsadsbadsb_dekuradara-from-master-branch"><a class="header" href="#a-hrefhttpsgithubcomrsadsbadsb_dekuradara-from-master-branch"><a href="https://github.com/rsadsb/adsb_deku">radar</a> from master branch</a></h3>
+<h3 id="radar-from-master-branch"><a class="header" href="#radar-from-master-branch"><a href="https://github.com/rsadsb/adsb_deku">radar</a> from master branch</a></h3>
 <pre><code class="language-shell">RUSTFLAGS=&quot;-C target-cpu=native&quot; cargo install --git https://github.com/rsadsb/adsb_deku rsadsb_apps --bin radar
 </code></pre>
 </details>
@@ -281,7 +309,7 @@ See <a href="rasp-pi-display.html">Raspberry Pi in-car ADS-B Display - with Rust
 <h2 id="links--changelogs"><a class="header" href="#links--changelogs">Links / Changelogs</a></h2>
 <p>All code is released under the <a href="https://github.com/rsadsb">github/rsadsb</a> account.
 Release binaries are available at the following links.</p>
-<h3 id="a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv20231122adsb_deku-v20231122a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv20231122adsb_deku-v20231122a"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v2023.11.22">adsb_deku v2023.11.22</a></a></h3>
+<h3 id="adsb_deku-v20231122"><a class="header" href="#adsb_deku-v20231122"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v2023.11.22">adsb_deku v2023.11.22</a></a></h3>
 <p>See <a href="https://github.com/rsadsb/adsb_deku/blob/v2023.11.22/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on <code>adsb_deku</code> libraries, <code>radar</code>, and <code>1090</code>. </p>
 <ul>
 <li>Released <code>0.6.3</code> of <a href="https://crates.io/crates/rsadsb_common">rsadsb_common</a></li>
@@ -289,7 +317,7 @@ Release binaries are available at the following links.</p>
 <li>We now use <a href="https://ratatui.rs/">ratatui</a>. Great to see this being properly maintained!</li>
 <li>Other dependency updates</li>
 </ul>
-<h3 id="a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv070dump1090-v070a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv070dump1090-v070a"><a href="https://github.com/rsadsb/dump1090_rs/releases/tag/v0.7.0">dump1090 v0.7.0</a></a></h3>
+<h3 id="dump1090-v070"><a class="header" href="#dump1090-v070"><a href="https://github.com/rsadsb/dump1090_rs/releases/tag/v0.7.0">dump1090 v0.7.0</a></a></h3>
 <p>See <a href="https://github.com/rsadsb/dump1090_rs/blob/v0.7.0/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on <code>dump1090_rs</code>.</p>
 <ul>
 <li>Update <code>--host</code> to support IPv6 <a href="https://github.com/rsadsb/dump1090_rs/pull/67">!67</a> Thanks <a href="https://github.com/daviessm">@daviessm</a></li>
@@ -306,7 +334,7 @@ used libraries. Happy Holidays!</p>
 <h2 id="links--changelogs-1"><a class="header" href="#links--changelogs-1">Links / Changelogs</a></h2>
 <p>All code is released under the <a href="https://github.com/rsadsb">github/rsadsb</a> account.
 Release binaries are available at the following links.</p>
-<h3 id="a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv20221229adsb_deku-v20221229a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv20221229adsb_deku-v20221229a"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v2022.12.29">adsb_deku v2022.12.29</a></a></h3>
+<h3 id="adsb_deku-v20221229"><a class="header" href="#adsb_deku-v20221229"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v2022.12.29">adsb_deku v2022.12.29</a></a></h3>
 <p>See <a href="https://github.com/rsadsb/adsb_deku/blob/v2022.12.29/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on <code>adsb_deku</code> libraries, <code>radar</code>, and <code>1090</code>. </p>
 <h4 id="adsb_deku---062"><a class="header" href="#adsb_deku---062">adsb_deku - <code>0.6.2</code></a></h4>
 <ul>
@@ -320,7 +348,7 @@ Release binaries are available at the following links.</p>
 <ul>
 <li>Updated clap to v4, improving the command line parsing and help text</li>
 </ul>
-<h3 id="a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv061dump1090-v061a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv061dump1090-v061a"><a href="https://github.com/rsadsb/dump1090_rs/releases/tag/v0.6.1">dump1090 v0.6.1</a></a></h3>
+<h3 id="dump1090-v061"><a class="header" href="#dump1090-v061"><a href="https://github.com/rsadsb/dump1090_rs/releases/tag/v0.6.1">dump1090 v0.6.1</a></a></h3>
 <p>See <a href="https://github.com/rsadsb/dump1090_rs/blob/v0.6.1/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on <code>dump1090_rs</code>.</p>
 <ul>
 <li>Updated clap to v4, improving the command line parsing and help text</li>
@@ -333,10 +361,10 @@ Release binaries are available at the following links.</p>
 <h2 id="links--changelogs-2"><a class="header" href="#links--changelogs-2">Links / Changelogs</a></h2>
 <p>All code is released under the <a href="https://github.com/rsadsb">github/rsadsb</a> account.
 Release binaries are available at the following links.</p>
-<h3 id="a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv061adsb_deku-v061a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv061adsb_deku-v061a"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v0.6.1">adsb_deku v0.6.1</a></a></h3>
+<h3 id="adsb_deku-v061"><a class="header" href="#adsb_deku-v061"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v0.6.1">adsb_deku v0.6.1</a></a></h3>
 <p>See <a href="https://github.com/rsadsb/adsb_deku/blob/v0.5.1/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on <code>adsb_deku</code> library, <code>radar</code>, and <code>1090</code>. </p>
 <p>The library docs.rs documentation for this release is <a href="https://docs.rs/adsb_deku/0.5.1/adsb_deku/">here</a></p>
-<h2 id="radar"><a class="header" href="#radar">radar</a></h2>
+<h2 id="radar-1"><a class="header" href="#radar-1">radar</a></h2>
 <ul>
 <li>Remove <code>--display-callsign</code>, Add <code>--disable-callsign</code>. Display only ICAO number instead of Callsign / Tail Number</li>
 <li>Help tab will now show more help</li>
@@ -353,14 +381,14 @@ A huge <a href="thanks.html">thanks</a> to all.</p>
 <h2 id="links--changelogs-3"><a class="header" href="#links--changelogs-3">Links / Changelogs</a></h2>
 <p>All code is released under the <a href="https://github.com/rsadsb">github/rsadsb</a> account.
 Release binaries are available at the following links.</p>
-<h3 id="a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv060adsb_deku-v060a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv060adsb_deku-v060a"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v0.6.0">adsb_deku v0.6.0</a></a></h3>
+<h3 id="adsb_deku-v060"><a class="header" href="#adsb_deku-v060"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v0.6.0">adsb_deku v0.6.0</a></a></h3>
 <p>See <a href="https://github.com/rsadsb/adsb_deku/blob/v0.6.0/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on <code>adsb_deku</code> libraries, <code>radar</code>, and <code>1090</code>. </p>
 <p>The library docs.rs documentation for this release is <a href="https://docs.rs/adsb_deku/0.6.0/adsb_deku/">here</a></p>
-<h3 id="a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv060dump1090_rs-v060a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv060dump1090_rs-v060a"><a href="https://github.com/rsadsb/dump1090_rs/releases/tag/v0.6.0">dump1090_rs v0.6.0</a></a></h3>
+<h3 id="dump1090_rs-v060"><a class="header" href="#dump1090_rs-v060"><a href="https://github.com/rsadsb/dump1090_rs/releases/tag/v0.6.0">dump1090_rs v0.6.0</a></a></h3>
 <p>See <a href="https://github.com/rsadsb/dump1090_rs/blob/v0.6.0/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on the <code>dump1090_rs</code> application. </p>
 <h2 id="discuss"><a class="header" href="#discuss">Discuss</a></h2>
 <h2 id="news-1"><a class="header" href="#news-1">News</a></h2>
-<h2 id="radar-1"><a class="header" href="#radar-1">radar</a></h2>
+<h2 id="radar-2"><a class="header" href="#radar-2">radar</a></h2>
 <p><img src="https://github.com/rsadsb/adsb_deku/raw/master/media/peek_2022_08_19.gif" alt="video" /></p>
 <h3 id="updates"><a class="header" href="#updates">Updates</a></h3>
 <ul>
@@ -405,12 +433,12 @@ You can find that code <a href="https://github.com/wcampbell0x2a/rsadsb-embedded
 <h2 id="links--changelogs-4"><a class="header" href="#links--changelogs-4">Links / Changelogs</a></h2>
 <p>All code is released under the <a href="https://github.com/rsadsb">github/rsadsb</a> account.
 Release binaries are available at the following links.</p>
-<h3 id="a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv051adsb_deku-v051a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv051adsb_deku-v051a"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v0.5.1">adsb_deku v0.5.1</a></a></h3>
+<h3 id="adsb_deku-v051"><a class="header" href="#adsb_deku-v051"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v0.5.1">adsb_deku v0.5.1</a></a></h3>
 <p>See <a href="https://github.com/rsadsb/adsb_deku/blob/v0.5.1/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on <code>adsb_deku</code> library, <code>radar</code>, and <code>1090</code>. </p>
 <p>The library docs.rs documentation for this release is <a href="https://docs.rs/adsb_deku/0.5.1/adsb_deku/">here</a></p>
-<h3 id="a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv051dump1090_rs-v051a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv051dump1090_rs-v051a"><a href="https://github.com/rsadsb/dump1090_rs/releases/tag/v0.5.1">dump1090_rs v0.5.1</a></a></h3>
+<h3 id="dump1090_rs-v051"><a class="header" href="#dump1090_rs-v051"><a href="https://github.com/rsadsb/dump1090_rs/releases/tag/v0.5.1">dump1090_rs v0.5.1</a></a></h3>
 <p>See <a href="https://github.com/rsadsb/dump1090_rs/blob/v0.5.1/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on the <code>dump1090_rs</code> application. </p>
-<h2 id="radar-2"><a class="header" href="#radar-2">radar</a></h2>
+<h2 id="radar-3"><a class="header" href="#radar-3">radar</a></h2>
 <ul>
 <li>fix: Swap <code>Airplanes</code> table &quot;Latitude&quot; and &quot;Longitude&quot;, found by reddit user @BanksOfTheOuchita (<a href="https://github.com/rsadsb/adsb_deku/pull/111">!111</a>)</li>
 </ul>
@@ -427,10 +455,10 @@ A huge <a href="thanks.html">thanks</a> to all.</p>
 <h2 id="links--changelogs-5"><a class="header" href="#links--changelogs-5">Links / Changelogs</a></h2>
 <p>All code is released under the <a href="https://github.com/rsadsb">github/rsadsb</a> account.
 Release binaries are available at the following links.</p>
-<h3 id="a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv050adsb_deku-v050a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv050adsb_deku-v050a"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v0.5.0">adsb_deku v0.5.0</a></a></h3>
+<h3 id="adsb_deku-v050"><a class="header" href="#adsb_deku-v050"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v0.5.0">adsb_deku v0.5.0</a></a></h3>
 <p>See <a href="https://github.com/rsadsb/adsb_deku/blob/v0.5.0/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on <code>adsb_deku</code> library, <code>radar</code>, and <code>1090</code>. </p>
 <p>The library docs.rs documentation for this release is <a href="https://docs.rs/adsb_deku/0.5.0/adsb_deku/">here</a></p>
-<h3 id="a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv050dump1090_rs-v050a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv050dump1090_rs-v050a"><a href="https://github.com/rsadsb/dump1090_rs/releases/tag/v0.5.0">dump1090_rs v0.5.0</a></a></h3>
+<h3 id="dump1090_rs-v050"><a class="header" href="#dump1090_rs-v050"><a href="https://github.com/rsadsb/dump1090_rs/releases/tag/v0.5.0">dump1090_rs v0.5.0</a></a></h3>
 <p>See <a href="https://github.com/rsadsb/dump1090_rs/blob/v0.5.0/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on the <code>dump1090_rs</code> application. </p>
 <h2 id="discuss-1"><a class="header" href="#discuss-1">Discuss</a></h2>
 <ul>
@@ -452,7 +480,7 @@ Release binaries are available at the following links.</p>
 </ul>
 </li>
 </ul>
-<h2 id="radar-3"><a class="header" href="#radar-3">radar</a></h2>
+<h2 id="radar-4"><a class="header" href="#radar-4">radar</a></h2>
 <p><code>x86_64-unknown-linux-gnu</code>
 <img src="media/radar_main_v0.5.0.gif" alt="video" /></p>
 <p><code>armv7-unknown-linux-gnueabihf</code>
@@ -515,9 +543,9 @@ If you test this on new SDR platforms, merge requests welcome for default gain s
 <p><a href="https://github.com/rsadsb">rsadsb</a> is happy to announce v0.4.0 of our library and tools.
 This update focused on improving the accuracy of the library, as well as touching up the radar tui and
 improving performance.</p>
-<h3 id="a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv040adsb_deku-v040a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbadsb_dekureleasestagv040adsb_deku-v040a"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v0.4.0">adsb_deku v0.4.0</a></a></h3>
+<h3 id="adsb_deku-v040"><a class="header" href="#adsb_deku-v040"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v0.4.0">adsb_deku v0.4.0</a></a></h3>
 <p>See <a href="https://github.com/rsadsb/adsb_deku/blob/v0.4.0/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on adsb_deku library, radar, and 1090. </p>
-<h3 id="a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv040dump1090_rs-v040a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbdump1090_rsreleasestagv040dump1090_rs-v040a"><a href="https://github.com/rsadsb/dump1090_rs/releases/tag/v0.4.0">dump1090_rs v0.4.0</a></a></h3>
+<h3 id="dump1090_rs-v040"><a class="header" href="#dump1090_rs-v040"><a href="https://github.com/rsadsb/dump1090_rs/releases/tag/v0.4.0">dump1090_rs v0.4.0</a></a></h3>
 <p>See <a href="https://github.com/rsadsb/dump1090_rs/blob/v0.4.0/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on the dump1090 application. </p>
 <h3 id="discuss-2"><a class="header" href="#discuss-2">Discuss</a></h3>
 <ul>
@@ -530,7 +558,7 @@ improving performance.</p>
 <li><a href="https://this-week-in-rust.org/blog/2021/12/15/this-week-in-rust-421/">This Week in Rust 421</a></li>
 </ul>
 <hr />
-<h2 id="radar-4"><a class="header" href="#radar-4">radar</a></h2>
+<h2 id="radar-5"><a class="header" href="#radar-5">radar</a></h2>
 <p><img src="https://raw.githubusercontent.com/rsadsb/adsb_deku/master/media/2021_12_08.gif" alt="image" /></p>
 <h3 id="updates-3"><a class="header" href="#updates-3">Updates</a></h3>
 <p>Thank you to <a href="https://github.com/wiseman">@wiseman</a> for helping me develop features.</p>
@@ -667,7 +695,7 @@ fi
 <p>Simple Terminal.</p>
 <pre><code>&gt; apt install st
 </code></pre>
-<h3 id="a-hrefhttpsgithubcomrsadsbdump1090_rsdump1090a"><a class="header" href="#a-hrefhttpsgithubcomrsadsbdump1090_rsdump1090a"><a href="https://github.com/rsadsb/dump1090_rs">dump1090</a></a></h3>
+<h3 id="dump1090-3"><a class="header" href="#dump1090-3"><a href="https://github.com/rsadsb/dump1090_rs">dump1090</a></a></h3>
 <h4 id="systemd"><a class="header" href="#systemd">systemd</a></h4>
 <p>This will start <code>dump1090</code> and attach to an SDR at every bootup.
 Note you will need to change <code>ExecStart</code> and <code>WorkingDirectory</code> to whatever location you installed <code>dump1090</code> to.</p>
@@ -691,7 +719,7 @@ SyslogIdentifier=%n
 </code></pre>
 <pre><code>&gt; systemctl enable --now dump1090
 </code></pre>
-<h3 id="a-hrefhttpsgithubcomrsadsbadsb_dekuradara-1"><a class="header" href="#a-hrefhttpsgithubcomrsadsbadsb_dekuradara-1"><a href="https://github.com/rsadsb/adsb_deku">radar</a></a></h3>
+<h3 id="radar-6"><a class="header" href="#radar-6"><a href="https://github.com/rsadsb/adsb_deku">radar</a></a></h3>
 <h4 id="autostart"><a class="header" href="#autostart">autostart</a></h4>
 <p>Add to dwm autostart file: <code>~/.autostart</code>. This will automatically start <code>radar</code> in <code>st</code>.
 The following is an example of the <code>autostart.sh</code> file that I use.
@@ -742,42 +770,43 @@ have made this project achievable.</p>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                        
-                        
+
+
                         <div style="clear: both"></div>
                     </nav>
                 </div>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                
-                            </nav>
+
+            </nav>
 
         </div>
 
-        
-        
-        
-                <script type="text/javascript">
+
+
+
+        <script>
             window.playground_copyable = true;
         </script>
-        
-        
-                <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
-        
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
 
         <!-- Custom JS scripts -->
-        
-                        <script type="text/javascript">
+
+        <script>
         window.addEventListener('load', function() {
             window.setTimeout(window.print, 100);
         });
         </script>
-                
+
+    </div>
     </body>
 </html>
