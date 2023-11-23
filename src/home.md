@@ -20,7 +20,7 @@ See [quickstart](quickstart.md) for the easy installation process.
 ## Latest Release
 
 ### Major
-[2022-12-29](2022.12.29.md)
+[2023-11-22](2023.11.22.md)
 
 ### Minor
 N/A

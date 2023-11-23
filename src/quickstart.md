@@ -1,5 +1,5 @@
 # ADS-B Quick Start Installation Guide
-_last edited: 2022/12/29_
+_last edited: 2023/11/22_
 
 This guide will give you a quick and easy to setup system to demodulate and decode ADS-B messages using this Rust software!
 For a good technical intro into what ADS-B is and how it is decoded, see the following [guide](https://mode-s.org/decode/).
@@ -44,17 +44,17 @@ Binaries can be downloaded from the latest releases of our software on github.
 The following is an example for `x86_64`.
 ```
 # download dump1090_rs
-> wget https://github.com/rsadsb/dump1090_rs/releases/download/v0.6.1/dump1090_rs-x86_64-unknown-linux-gnu.tar.gz
+> wget https://github.com/rsadsb/dump1090_rs/releases/download/v0.7.0/dump1090_rs-x86_64-unknown-linux-gnu.tar.gz
 > tar -xf dump1090_rs-x86_64-unknown-linux-gnu.tar.gz
 
 # download radar
-> wget https://github.com/rsadsb/adsb_deku/releases/download/v2022.12.29/radar-x86_64-unknown-linux-gnu.tar.gz
+> wget https://github.com/rsadsb/adsb_deku/releases/download/v2023.11.22/radar-x86_64-unknown-linux-gnu.tar.gz
 > tar -xf radar-x86_64-unknown-linux-gnu.tar.gz
 ```
 
 `ARM` releases are also available:
-- [dump1090_rs](https://github.com/rsadsb/dump1090_rs/releases/tag/v0.6.1)
-- [radar](https://github.com/rsadsb/adsb_deku/releases/tag/v2022.12.29)
+- [dump1090_rs](https://github.com/rsadsb/dump1090_rs/releases/tag/v0.7.0)
+- [radar](https://github.com/rsadsb/adsb_deku/releases/tag/v2023.11.22)
 
 
 ## (Optional) Install from source for max performance
