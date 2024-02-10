@@ -89,7 +89,9 @@
             <div class="sidebar-scrollbox">
                 <ol class="chapter"><li class="chapter-item expanded affix "><a href="home.html">Home</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="quickstart.html">Quick Start</a></li><li class="chapter-item expanded "><a href="rsadsb_releases.html"><strong aria-hidden="true">1.</strong> rsadsb Release Notes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="2023.11.22.html"><strong aria-hidden="true">1.1.</strong> 2023.11.22</a></li><li class="chapter-item expanded "><a href="2022.12.29.html"><strong aria-hidden="true">1.2.</strong> 2022.12.29</a></li><li class="chapter-item expanded "><a href="v0.6.1.html"><strong aria-hidden="true">1.3.</strong> v0.6.1</a></li><li class="chapter-item expanded "><a href="v0.6.0.html"><strong aria-hidden="true">1.4.</strong> v0.6.0</a></li><li class="chapter-item expanded "><a href="v0.5.1.html"><strong aria-hidden="true">1.5.</strong> v0.5.1</a></li><li class="chapter-item expanded "><a href="v0.5.0.html"><strong aria-hidden="true">1.6.</strong> v0.5.0</a></li><li class="chapter-item expanded "><a href="v0.4.0.html"><strong aria-hidden="true">1.7.</strong> v0.4.0</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Blog</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="rasp-pi-display.html" class="active">Raspberry Pi in-car ADS-B Display - with Rust!</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="thanks.html">Thanks</a></li></ol>
             </div>
-            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
         </nav>
 
         <!-- Track and set sidebar scroll position -->
@@ -178,7 +180,7 @@
 <p>Do you have aircraft flying above your car, or just want to see all the aircraft around your area as you sit in the passenger seat
 <del>or just really nerdy and want to use the Rust language and a Raspberry Pi in your car</del>?
 This project will leave you with a Raspberry Pi touchscreen that uses our <code>radar</code> and <code>dump1090_rs</code> applications to do just that!</p>
-<p>This project is entirely open-source, checkout the software on github: </p>
+<p>This project is entirely open-source, checkout the software on github:</p>
 <ul>
 <li><a href="https://github.com/rsadsb/adsb_deku/">radar</a>
 <img src="https://img.shields.io/github/stars/rsadsb/adsb_deku?label=stars&amp;style=flat-square" alt="" /></li>
@@ -203,7 +205,7 @@ This project will leave you with a Raspberry Pi touchscreen that uses our <code>
 <li>A car ;)</li>
 <li>RS-840 Original Comet Antenna Lip Mount - No Cable</li>
 <li>SMA Male to N Female Bulkhead</li>
-<li>PiTFT Plus 480x320 3.5&quot;</li>
+<li>PiTFT Plus 480x320 3.5"</li>
 <li>GlobalSat BU-353-S4 USB GPS</li>
 </ul>
 <h4 id="car-mount"><a class="header" href="#car-mount">Car Mount</a></h4>
@@ -219,7 +221,7 @@ This project will leave you with a Raspberry Pi touchscreen that uses our <code>
 <h3 id="pitft-plus"><a class="header" href="#pitft-plus">PiTFT Plus</a></h3>
 <p>You will need to following the instructions located on the adafruit site for installing the touchscreen drivers:
 <a href="https://learn.adafruit.com/adafruit-pitft-3-dot-5-touch-screen-for-raspberry-pi">link</a></p>
-<p>Add <code>        Option &quot;TransformationMatrix&quot; &quot;0 -1 1 1 0 0 0 0 1&quot;</code> to <code>touchscreen</code> in <code>/usr/share/X11/xorg.conf.d/40-libinput.conf</code> for inverting the touchscreen input 90 degrees.</p>
+<p>Add <code>        Option "TransformationMatrix" "0 -1 1 1 0 0 0 0 1"</code> to <code>touchscreen</code> in <code>/usr/share/X11/xorg.conf.d/40-libinput.conf</code> for inverting the touchscreen input 90 degrees.</p>
 <h3 id="soapysdr"><a class="header" href="#soapysdr">SoapySDR</a></h3>
 <p>We need soapysdr version 0.8.1, so install from the following commands.</p>
 <h4 id="soapysdr-1"><a class="header" href="#soapysdr-1">SoapySDR</a></h4>
@@ -252,10 +254,10 @@ This project will leave you with a Raspberry Pi touchscreen that uses our <code>
 <p>Add your USB device to the config, for example adding a serial USB GPS device <code>/dev/ttyUSB0</code>.</p>
 <pre><code class="language-shell">&gt; cat /etc/default/gpsd
 # Default settings for gpsd.
-START_DAEMON=&quot;true&quot;
-GPSD_OPTIONS=&quot;&quot;
-DEVICES=&quot;/dev/ttyUSB0&quot;
-USBAUTO=&quot;true&quot;
+START_DAEMON="true"
+GPSD_OPTIONS=""
+DEVICES="/dev/ttyUSB0"
+USBAUTO="true"
 </code></pre>
 <p>Restart the gpsd service after changing the config.</p>
 <pre><code>&gt; systemctl restart gpsd
@@ -276,7 +278,7 @@ raspberry pi and run <code>startx</code> to start dwm.</p>
 exec dwm
 </code></pre>
 <p>Add the following to <code>/etc/profile</code> for starting dwm at login:</p>
-<pre><code>if [ -z &quot;${DISPLAY}&quot; ] &amp;&amp; [ &quot;${XDG_VTNR}&quot; -eq 1 ]; then
+<pre><code>if [ -z "${DISPLAY}" ] &amp;&amp; [ "${XDG_VTNR}" -eq 1 ]; then
   exec startx
 fi
 </code></pre>
@@ -318,15 +320,15 @@ The following is an example of the <code>autostart.sh</code> file that I use.
 If you want more airports, check out the <code>--aiports</code> option: <a href="https://user-images.githubusercontent.com/15236002/151717559-c1692dc8-4ce7-42c6-bbe7-0bf9a24338ab.png">image</a>.</p>
 <pre><code>&gt; cat ~/.dwm/autostart.sh
 #!/usr/bin/sh
-st -e ~/.cargo/bin/radar --lat=&quot;39.0&quot; --long=&quot;-84.00&quot; --scale=&quot;0.80&quot; \
+st -e ~/.cargo/bin/radar --lat="39.0" --long="-84.00" --scale="0.80" \
 --gpsd \
 --disable-lat-long \
 --touchscreen \
---locations &quot;(wpafb,39.827793,-84.045894)&quot; &quot;(KMGY,39.591672,-84.227865)&quot; \
-&quot;(DAY,39.898899,-84.2287941)&quot; &quot;(CVG,39.0537296,-84.6500094)&quot; &quot;(CMH,39.9999399,-82.8893654)&quot; \
-&quot;(IND,39.7168593,-86.2977839)&quot; &quot;(KAOH,40.7588499,-83.8936466)&quot; &quot;(FDY,40.6141522,-84.2637368)&quot; \
-&quot;(fhq,39.4503696,-82.2616143)&quot; &quot;(mwo,39.4670316,-84.3879972)&quot; &quot;(rma,39.7298745,-84.8377054)&quot; \
-&quot;(fma,38.2256493,-84.0172027)&quot; &quot;(fwa,41.0588807,-85.2668302)&quot;
+--locations "(wpafb,39.827793,-84.045894)" "(KMGY,39.591672,-84.227865)" \
+"(DAY,39.898899,-84.2287941)" "(CVG,39.0537296,-84.6500094)" "(CMH,39.9999399,-82.8893654)" \
+"(IND,39.7168593,-86.2977839)" "(KAOH,40.7588499,-83.8936466)" "(FDY,40.6141522,-84.2637368)" \
+"(fhq,39.4503696,-82.2616143)" "(mwo,39.4670316,-84.3879972)" "(rma,39.7298745,-84.8377054)" \
+"(fma,38.2256493,-84.0172027)" "(fwa,41.0588807,-85.2668302)"
 </code></pre>
 <h1 id="discuss"><a class="header" href="#discuss">Discuss</a></h1>
 <ul>
