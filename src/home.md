@@ -9,7 +9,7 @@ A Rust software suite for ADS-B demodulation, decoding, and processing.
 ## Features
 
 * **Easy Install** - binaries are provided for multiple platforms within the github releases.
-* **Beautiful Applications**  - the **radar** application uses [tui](https://github.com/fdehau/tui-rs) to create elegant terminal applications.
+* **Beautiful Applications** - the **radar** application uses [ratatui](https://github.com/ratatui/ratatui) to create elegant terminal applications.
 * **Correct Decoding** - **rsadsb** uses state of the art libraries such as [deku](https://github.com/sharksforarms/deku) to closely and correctly parse the ADS-B protocol.
 * **Touchscreen Enabled** - **radar** is designed to use with both just a keyboard, or a touchscreen.
 * **Extendable Hackable source code** - all source code is open-source and is easily modified.
@@ -20,7 +20,7 @@ See [quickstart](quickstart.md) for the easy installation process.
 ## Latest Release
 
 ### Major
-[2023-11-22](2023.11.22.md)
+[2024-09-02](2024.09.02.md)
 
 ### Minor
 N/A
