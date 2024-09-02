@@ -303,14 +303,38 @@ See <a href="rasp-pi-display.html">Raspberry Pi in-car ADS-B Display - with Rust
 <li><a href="v0.5.0.html">v0.5.0</a></li>
 <li><a href="v0.4.0.html">v0.4.0</a></li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="20240902"><a class="header" href="#20240902">2024.09.02</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="2024-09-02-release-notes"><a class="header" href="#2024-09-02-release-notes">2024-09-02 Release Notes</a></h1>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/rsadsb/adsb_deku/master/media/logo.png")
+</p>
+<p>It's been a quiet year, but here are some updates to capture more airplanes for <em>both</em> applications!</p>
+<p>As always, check out <a href="quickstart.html">quickstart guide</a> for a installation guide.</p>
+<h2 id="links--changelogs"><a class="header" href="#links--changelogs">Links / Changelogs</a></h2>
+<p>All code is released under the <a href="https://github.com/rsadsb">github/rsadsb</a> account.
+Release binaries are available at the following links.</p>
+<h3 id="adsb_deku-v20240902"><a class="header" href="#adsb_deku-v20240902"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v2024.09.02">adsb_deku v2024.09.02</a></a></h3>
+<p>See <a href="https://github.com/rsadsb/adsb_deku/blob/v2024.09.02/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on <code>adsb_deku</code> libraries, <code>radar</code>, and <code>1090</code>.</p>
+<ul>
+<li>Released <code>0.7.0</code> of <a href="https://crates.io/crates/rsadsb_common">rsadsb_common</a></li>
+<li>Released <code>0.7.1</code> of <a href="https://crates.io/crates/adsb_deku">adsb_deku</a></li>
+<li><code>DF::TisB</code> messages can now be applied to airplane positions</li>
+<li>Fix cpr calculations by forcing mod operations to be positive</li>
+<li>Other dependency updates</li>
+</ul>
+<h3 id="dump1090-v080"><a class="header" href="#dump1090-v080"><a href="https://github.com/rsadsb/dump1090_rs/releases/tag/v0.8.0">dump1090 v0.8.0</a></a></h3>
+<p>See <a href="https://github.com/rsadsb/dump1090_rs/blob/v0.8.0/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on <code>dump1090_rs</code>.</p>
+<ul>
+<li>Update MSRV to <code>1.74</code></li>
+<li>Properly decode short ADSB messages</li>
+<li>Add <code>--quiet</code> to remove hex output of decoded message bytes</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="2023-11-22-release-notes"><a class="header" href="#2023-11-22-release-notes">2023-11-22 Release Notes</a></h1>
 <p align="center">
   <img src="https://raw.githubusercontent.com/rsadsb/adsb_deku/master/media/logo.png")
 </p>
 <p>Happy Holidays! Not many updates this year, these are mostly dependency updates.</p>
 <p>As always, check out <a href="quickstart.html">quickstart guide</a> for a installation guide.</p>
-<h2 id="links--changelogs"><a class="header" href="#links--changelogs">Links / Changelogs</a></h2>
+<h2 id="links--changelogs-1"><a class="header" href="#links--changelogs-1">Links / Changelogs</a></h2>
 <p>All code is released under the <a href="https://github.com/rsadsb">github/rsadsb</a> account.
 Release binaries are available at the following links.</p>
 <h3 id="adsb_deku-v20231122"><a class="header" href="#adsb_deku-v20231122"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v2023.11.22">adsb_deku v2023.11.22</a></a></h3>
@@ -335,7 +359,7 @@ Release binaries are available at the following links.</p>
 <p>This update fixes issues with building the project, as we have updated to the latest versions of all
 used libraries. Happy Holidays!</p>
 <p>As always, check out <a href="quickstart.html">quickstart guide</a> for a installation guide.</p>
-<h2 id="links--changelogs-1"><a class="header" href="#links--changelogs-1">Links / Changelogs</a></h2>
+<h2 id="links--changelogs-2"><a class="header" href="#links--changelogs-2">Links / Changelogs</a></h2>
 <p>All code is released under the <a href="https://github.com/rsadsb">github/rsadsb</a> account.
 Release binaries are available at the following links.</p>
 <h3 id="adsb_deku-v20221229"><a class="header" href="#adsb_deku-v20221229"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v2022.12.29">adsb_deku v2022.12.29</a></a></h3>
@@ -362,7 +386,7 @@ Release binaries are available at the following links.</p>
   <img src="https://raw.githubusercontent.com/rsadsb/adsb_deku/master/media/logo.png")
 </p>
 <p>Minor bugfix to the <code>radar</code> application.</p>
-<h2 id="links--changelogs-2"><a class="header" href="#links--changelogs-2">Links / Changelogs</a></h2>
+<h2 id="links--changelogs-3"><a class="header" href="#links--changelogs-3">Links / Changelogs</a></h2>
 <p>All code is released under the <a href="https://github.com/rsadsb">github/rsadsb</a> account.
 Release binaries are available at the following links.</p>
 <h3 id="adsb_deku-v061"><a class="header" href="#adsb_deku-v061"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v0.6.1">adsb_deku v0.6.1</a></a></h3>
@@ -382,7 +406,7 @@ Release binaries are available at the following links.</p>
 We're proud to have over 200 stars on the main repo, thanks for the support!
 A huge <a href="thanks.html">thanks</a> to all.</p>
 <p>See <a href="quickstart.html">quickstart guide</a> for a installation guide.</p>
-<h2 id="links--changelogs-3"><a class="header" href="#links--changelogs-3">Links / Changelogs</a></h2>
+<h2 id="links--changelogs-4"><a class="header" href="#links--changelogs-4">Links / Changelogs</a></h2>
 <p>All code is released under the <a href="https://github.com/rsadsb">github/rsadsb</a> account.
 Release binaries are available at the following links.</p>
 <h3 id="adsb_deku-v060"><a class="header" href="#adsb_deku-v060"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v0.6.0">adsb_deku v0.6.0</a></a></h3>
@@ -434,7 +458,7 @@ You can find that code <a href="https://github.com/wcampbell0x2a/rsadsb-embedded
   <img src="https://raw.githubusercontent.com/rsadsb/adsb_deku/master/media/logo.png")
 </p>
 <p>Minor bugfix to the <code>radar</code> application.</p>
-<h2 id="links--changelogs-4"><a class="header" href="#links--changelogs-4">Links / Changelogs</a></h2>
+<h2 id="links--changelogs-5"><a class="header" href="#links--changelogs-5">Links / Changelogs</a></h2>
 <p>All code is released under the <a href="https://github.com/rsadsb">github/rsadsb</a> account.
 Release binaries are available at the following links.</p>
 <h3 id="adsb_deku-v051"><a class="header" href="#adsb_deku-v051"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v0.5.1">adsb_deku v0.5.1</a></a></h3>
@@ -456,7 +480,7 @@ A huge <a href="thanks.html">thanks</a> to all.</p>
 <p>See <a href="quickstart.html">quickstart guide</a> for a installation guide.</p>
 <p>See <a href="rasp-pi-display.html">Raspberry Pi in-car ADS-B Display - with Rust!</a> for my blog post on using my libraries and applications for an in-car ADS-B display.</p>
 <p>If you want to track Elon Musk with Rust, check <a href="https://github.com/rsadsb/elons-jets-rs">this repo</a> out ;)</p>
-<h2 id="links--changelogs-5"><a class="header" href="#links--changelogs-5">Links / Changelogs</a></h2>
+<h2 id="links--changelogs-6"><a class="header" href="#links--changelogs-6">Links / Changelogs</a></h2>
 <p>All code is released under the <a href="https://github.com/rsadsb">github/rsadsb</a> account.
 Release binaries are available at the following links.</p>
 <h3 id="adsb_deku-v050"><a class="header" href="#adsb_deku-v050"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v0.5.0">adsb_deku v0.5.0</a></a></h3>

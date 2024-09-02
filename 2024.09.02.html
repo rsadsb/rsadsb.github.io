@@ -175,7 +175,31 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="20240902"><a class="header" href="#20240902">2024.09.02</a></h1>
+                        <h1 id="2024-09-02-release-notes"><a class="header" href="#2024-09-02-release-notes">2024-09-02 Release Notes</a></h1>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/rsadsb/adsb_deku/master/media/logo.png")
+</p>
+<p>It's been a quiet year, but here are some updates to capture more airplanes for <em>both</em> applications!</p>
+<p>As always, check out <a href="quickstart.html">quickstart guide</a> for a installation guide.</p>
+<h2 id="links--changelogs"><a class="header" href="#links--changelogs">Links / Changelogs</a></h2>
+<p>All code is released under the <a href="https://github.com/rsadsb">github/rsadsb</a> account.
+Release binaries are available at the following links.</p>
+<h3 id="adsb_deku-v20240902"><a class="header" href="#adsb_deku-v20240902"><a href="https://github.com/rsadsb/adsb_deku/releases/tag/v2024.09.02">adsb_deku v2024.09.02</a></a></h3>
+<p>See <a href="https://github.com/rsadsb/adsb_deku/blob/v2024.09.02/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on <code>adsb_deku</code> libraries, <code>radar</code>, and <code>1090</code>.</p>
+<ul>
+<li>Released <code>0.7.0</code> of <a href="https://crates.io/crates/rsadsb_common">rsadsb_common</a></li>
+<li>Released <code>0.7.1</code> of <a href="https://crates.io/crates/adsb_deku">adsb_deku</a></li>
+<li><code>DF::TisB</code> messages can now be applied to airplane positions</li>
+<li>Fix cpr calculations by forcing mod operations to be positive</li>
+<li>Other dependency updates</li>
+</ul>
+<h3 id="dump1090-v080"><a class="header" href="#dump1090-v080"><a href="https://github.com/rsadsb/dump1090_rs/releases/tag/v0.8.0">dump1090 v0.8.0</a></a></h3>
+<p>See <a href="https://github.com/rsadsb/dump1090_rs/blob/v0.8.0/CHANGELOG.md">CHANGELOG.md</a> for detailed notes on <code>dump1090_rs</code>.</p>
+<ul>
+<li>Update MSRV to <code>1.74</code></li>
+<li>Properly decode short ADSB messages</li>
+<li>Add <code>--quiet</code> to remove hex output of decoded message bytes</li>
+</ul>
 
                     </main>
 
