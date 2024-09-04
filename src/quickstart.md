@@ -44,7 +44,7 @@ Binaries can be downloaded from the latest releases of our software on github.
 The following is an example for `x86_64`.
 ```
 # download dump1090_rs
-> wget https://github.com/rsadsb/dump1090_rs/releases/download/v0.8.0/dump1090_rs-x86_64-unknown-linux-gnu.tar.gz
+> wget https://github.com/rsadsb/dump1090_rs/releases/download/v0.8.1/dump1090_rs-x86_64-unknown-linux-gnu.tar.gz
 > tar -xf dump1090_rs-x86_64-unknown-linux-gnu.tar.gz
 
 # download radar
@@ -53,7 +53,7 @@ The following is an example for `x86_64`.
 ```
 
 `ARM` releases are also available:
-- [dump1090_rs](https://github.com/rsadsb/dump1090_rs/releases/tag/v0.8.0)
+- [dump1090_rs](https://github.com/rsadsb/dump1090_rs/releases/tag/v0.8.1)
 - [radar](https://github.com/rsadsb/adsb_deku/releases/tag/v2024.09.02)
 
 
